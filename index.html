@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Irshad & Fathima — Royal Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Malayalam:wght@400;600;700&display=swap">
+<style>
+@property --r{syntax:"<length>";inherits:false;initial-value:0px}
+:root {
+  --emerald-deep: #1F5F43;
+  --emerald-dark: #123323;
+  --emerald-med: #2F694D;
+  --sage-soft: #6F9E80;
+  --sage-light: #AACAB8;
+  --green-light: #DCF0E4;
+  --ivory: #F8FAF8;
+  --white: #FFFFFF;
+  --gold: #D4AF37;
+  --gold-light: #F7E7BE;
+  --gold-bright: #FFE07D;
+  --gold-glow: rgba(212, 175, 55, 0.45);
+  --gold-foil: linear-gradient(135deg, #FFF6D8 0%, #E6C265 25%, #C29B38 50%, #F5E1A4 75%, #A37C20 100%);
+  
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-royal: "Cinzel", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-arabic: "Amiri", serif;
+  --font-malayalam: "Noto Serif Malayalam", serif;
+  
+  --night: #123323;
+  --violet: #1F5F43;
+  --aqua: #6F9E80;
+  --blush: #3F7D5E;
+  --cream: #F8FAF8;
+  --ink: #123323;
+}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--emerald-dark);font:14.5px/1.6 var(--font-sans);text-align:center;overflow-x:hidden}
+
+.t>span{display:none}
+body.ea .t>.en,body.ea .t>.ar,body.en .t>.en,body.ar .t>.ar,body.ml .t>.ml{display:block}
+.t>.ar{font-family:var(--font-arabic);direction:rtl}.t>.ml{font-family:var(--font-malayalam);line-height:1.7}
+body.ea .t>.ar{font-size:13.5px;opacity:.92;margin-top:2px}
+
+.langs{position:fixed;z-index:90;top:calc(8px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:3px 5px;background:rgba(18,51,35,.94);backdrop-filter:blur(10px);border:1px solid var(--gold);border-radius:24px;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.lb{border:0;background:none;color:var(--gold-light);font:600 11px var(--font-sans);letter-spacing:.8px;padding:4px 10px;border-radius:16px;cursor:pointer;transition:.25s;text-transform:uppercase}
+.lb[aria-pressed=true]{background:var(--gold-foil);color:var(--emerald-dark);font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+:focus-visible{outline:2.5px solid var(--gold);outline-offset:2px}
+.gold{color:var(--gold)}
+
+/* Floating music button */
+.music-toggle{position:fixed;bottom:16px;right:16px;z-index:90;background:var(--emerald-dark);border:1.5px solid var(--gold);color:var(--gold);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.35);transition:transform .3s,box-shadow .3s}
+.music-toggle:hover{transform:scale(1.08);box-shadow:0 6px 20px var(--gold-glow)}
+.music-waves{display:flex;gap:2.5px;align-items:flex-end;height:14px}
+.music-waves span{width:2.5px;background:var(--gold);border-radius:2px;animation:wave 1.2s infinite ease-in-out alternate}
+.music-waves span:nth-child(2){animation-delay:.2s}
+.music-waves span:nth-child(3){animation-delay:.4s}
+.music-toggle.paused .music-waves span{animation:none;height:3px}
+@keyframes wave{0%{height:3px}100%{height:14px}}
+
+/* Music Now Playing Floating Banner */
+.music-now-playing{position:fixed;bottom:64px;right:16px;z-index:89;background:rgba(22,58,41,.96);border:1px solid var(--gold);border-radius:12px;padding:6px 12px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.4);backdrop-filter:blur(8px);transition:transform .4s cubic-bezier(.175,.885,.32,1.275),opacity .4s;transform:translateY(120%);opacity:0;pointer-events:none}
+.music-now-playing.show{transform:translateY(0);opacity:1;pointer-events:auto}
+.mnp-icon{font-size:16px;color:var(--gold);animation:bob 2.2s infinite}
+.mnp-info{text-align:left}
+.mnp-title{font-size:12.5px;font-weight:700;color:var(--gold-light);line-height:1.2;font-family:"Cormorant Garamond",serif}
+.mnp-artist{font-size:10.5px;color:var(--sage-light);line-height:1.2}
+.mnp-eq{display:flex;gap:2px;align-items:flex-end;height:11px}
+.mnp-eq span{width:2px;background:var(--gold);border-radius:1px;animation:wave .8s infinite alternate ease-in-out}
+.mnp-eq span:nth-child(2){animation-delay:.15s}
+.mnp-eq span:nth-child(3){animation-delay:.3s}
+.mnp-eq span:nth-child(4){animation-delay:.45s}
+
+/* Floating assistant */
+.cmd-fab{position:fixed;bottom:16px;left:16px;z-index:90;background:var(--emerald-dark);border:1px solid var(--gold);color:var(--gold);padding:6px 12px;border-radius:24px;display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.3)}
+
+/* Islamic Royal Grand Entrance Gate Landing Screen (Replaces Lantern) */
+#intro{position:fixed;inset:0;z-index:99;background:radial-gradient(ellipse at 50% 35%,#1F5F43 0%,#163A29 60%,#0c2217 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;transition:opacity 1.1s cubic-bezier(.4,0,.2,1),transform 1.1s cubic-bezier(.4,0,.2,1);overflow:hidden;padding:16px}
+#intro.opened{opacity:0;transform:scale(1.08);pointer-events:none}
+
+.portal-container{position:relative;width:min(440px,94vw);display:flex;flex-direction:column;align-items:center;z-index:2}
+.portal-crest{display:flex;align-items:center;justify-content:center;position:relative;margin-bottom:8px}
+.crest-moon{width:58px;height:58px;border-radius:50%;box-shadow:inset -15px 4px 0 0 var(--gold);filter:drop-shadow(0 0 18px var(--gold-glow));animation:moon-bob 4s ease-in-out infinite alternate}
+.crest-star{position:absolute;top:6px;right:-2px;font-size:22px;color:var(--gold);filter:drop-shadow(0 0 10px var(--gold));animation:star-glow 2s infinite alternate}
+@keyframes moon-bob{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(-8px) rotate(-6deg)}}
+@keyframes star-glow{0%{opacity:.6;transform:scale(.85)}100%{opacity:1;transform:scale(1.15)}}
+
+.portal-bismillah{font:700 clamp(24px,5.5vw,34px) Amiri,serif;color:var(--gold);margin:6px 0 14px;text-shadow:0 0 20px var(--gold-glow);letter-spacing:1px;direction:rtl}
+
+/* Islamic Pointed Arch & 3D Double Palace Doors */
+.islamic-arch-gateway{position:relative;width:min(370px,88vw);height:310px;background:rgba(22,58,41,0.7);border:3px solid var(--gold);border-radius:185px 185px 16px 16px;box-shadow:0 0 45px rgba(212,175,55,.25),inset 0 0 35px rgba(0,0,0,.6);perspective:1000px;overflow:visible;display:flex;align-items:flex-end;justify-content:center}
+.arch-overlay-svg{position:absolute;top:-1px;left:0;right:0;width:100%;height:110px;pointer-events:none;z-index:4}
+
+.portal-doors-wrapper{position:relative;width:100%;height:100%;border-radius:180px 180px 12px 12px;overflow:hidden;display:flex;background:#0d2319}
+.palace-door{width:50%;height:100%;position:relative;background:linear-gradient(135deg,#1F5F43 0%,#163A29 60%,#0f2b1d 100%);border:1.5px solid var(--gold);transition:transform 1.3s cubic-bezier(.25,1,.5,1);box-shadow:inset 0 0 25px rgba(0,0,0,.6)}
+.door-left{border-radius:180px 0 0 12px;transform-origin:left center;border-right:1px solid var(--gold-light)}
+.door-right{border-radius:0 180px 12px 0;transform-origin:right center;border-left:1px solid var(--gold-light)}
+.palace-door .door-arabesque{position:absolute;inset:8px;border:1px dashed rgba(212,175,55,.6);border-radius:inherit;background:radial-gradient(circle at 50% 50%,rgba(212,175,55,.12) 10%,transparent 65%),repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(212,175,55,.1) 13px,rgba(212,175,55,.1) 14px)}
+.door-knocker{position:absolute;top:54%;width:34px;height:34px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:16px;box-shadow:0 4px 10px rgba(0,0,0,.5);background:rgba(22,58,41,.85)}
+.door-left .door-knocker{right:14px}
+.door-right .door-knocker{left:14px}
+
+/* When Gate is opened */
+#intro.open-doors .door-left{transform:perspective(800px) rotateY(-112deg)}
+#intro.open-doors .door-right{transform:perspective(800px) rotateY(112deg)}
+
+/* Central Golden Medallion Trigger Button */
+.gate-seal-btn{position:absolute;top:54%;left:50%;transform:translate(-50%,-50%);z-index:25;background:radial-gradient(circle at 35% 35%,#F4E3B2 0%,#D4AF37 55%,#997a15 100%);border:3px solid #fff;border-radius:50%;width:116px;height:116px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;pointer-events:auto;user-select:none;-webkit-tap-highlight-color:transparent;box-shadow:0 0 35px var(--gold-glow),0 8px 25px rgba(0,0,0,.6);transition:transform .3s,box-shadow .3s;animation:seal-pulse 2.2s infinite alternate}
+.gate-seal-btn *{pointer-events:none}
+.gate-seal-btn:hover{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 0 50px var(--gold)}
+@keyframes seal-pulse{0%{box-shadow:0 0 25px var(--gold-glow);transform:translate(-50%,-50%) scale(1)}100%{box-shadow:0 0 45px rgba(212,175,55,.8);transform:translate(-50%,-50%) scale(1.05)}}
+.seal-icon{font-size:26px;line-height:1}
+.seal-text-ar{font:700 13px Amiri,serif;color:var(--emerald-dark);direction:rtl;margin-top:2px}
+.seal-text-en{font:700 10px "Cormorant Garamond",serif;color:#163A29;letter-spacing:1px}
+
+.portal-prompt{margin-top:18px;font-size:19px;font-weight:600;color:var(--gold-light);animation:pulse-text 2s infinite alternate;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+@keyframes pulse-text{0%{opacity:.8}100%{opacity:1;transform:scale(1.02)}}
+.portal-sub{font-size:14px;color:var(--sage-light);margin-top:6px;opacity:.95}
+
+/* Floating Couple Scroll Companion: hidden to prevent blocking content */
+.scroll-couple-companion{display:none!important}
+
+/* Dedicated Bottom Couple Grand Finale Section (Refined, Elegant Proportions) */
+.finale-section{position:relative;padding:30px 14px 38px;min-height:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,#1F5F43 0%,#163A29 55%,#0d2218 100%);color:var(--ivory);overflow:hidden;border-top:1.5px solid var(--gold);box-shadow:inset 0 12px 24px rgba(0,0,0,.4)}
+.finale-moon{position:absolute;top:14px;right:10%;width:34px;height:34px;border-radius:50%;box-shadow:inset -7px 2px 0 0 var(--gold);filter:drop-shadow(0 0 10px var(--gold-glow));animation:bob 5s ease-in-out infinite}
+.finale-header{position:relative;z-index:3;margin-bottom:6px}
+.finale-title{font-size:clamp(17px,2.6vw,22px);color:var(--gold);margin:0 0 2px;text-shadow:0 0 14px var(--gold-glow);font-family:var(--font-royal);letter-spacing:1.5px;text-transform:uppercase}
+.finale-sub{font-size:11.5px;color:var(--sage-light);font-style:italic;margin:0}
+
+/* Distance Indicator Banner */
+.finale-distance-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,175,55,.15);border:1px solid var(--gold);padding:3px 12px;border-radius:20px;font-size:11px;font-weight:700;color:var(--gold-light);margin:6px 0 10px;box-shadow:0 0 12px rgba(212,175,55,.2);animation:glow 3s infinite}
+
+/* Dedicated Couple Dais Stage (ONLY 2 PEOPLE) */
+.finale-stage-dais{position:relative;width:min(440px,92vw);height:210px;margin:4px auto;border-radius:12px;background:linear-gradient(180deg,rgba(31,95,67,.3),rgba(22,58,41,.85));border:1px solid rgba(212,175,55,.4);box-shadow:0 12px 30px rgba(0,0,0,.4),inset 0 0 14px rgba(212,175,55,.1);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.dais-pedestal{position:absolute;bottom:0;left:0;right:0;height:22px;background:linear-gradient(180deg,var(--gold),#8f731c);box-shadow:0 -2px 10px rgba(212,175,55,.3)}
+.dais-carpet{position:absolute;bottom:10px;left:6%;right:6%;height:6px;background:rgba(22,58,41,.9);border-radius:4px;border-top:1px solid var(--gold)}
+
+/* The Two Couple Figures */
+.finale-card{position:absolute;bottom:26px;width:82px;display:flex;flex-direction:column;align-items:center;transition:left .7s cubic-bezier(.2,1,.3,1),right .7s cubic-bezier(.2,1,.3,1),transform .5s ease;cursor:pointer;z-index:5}
+.finale-card:hover{transform:scale(1.05)}
+.finale-portrait-frame{position:relative;width:74px;height:108px;border-radius:40px 40px 6px 6px;overflow:hidden;border:1.5px solid var(--gold);box-shadow:0 6px 18px rgba(0,0,0,.45),0 0 12px rgba(212,175,55,.2);background:#163A29}
+.finale-portrait-frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.finale-card:hover .finale-portrait-frame img{transform:scale(1.06)}
+.finale-card-label{margin-top:4px;font-size:12.5px;font-weight:700;color:var(--gold-light);letter-spacing:.8px;font-family:var(--font-royal);text-shadow:0 1px 4px rgba(0,0,0,.7)}
+.finale-card-role{font-size:9.5px;color:var(--sage-light);font-style:italic}
+
+/* Central Union Emblem */
+.finale-union-emblem{position:absolute;top:38%;left:50%;transform:translate(-50%,-50%) scale(0);z-index:8;transition:transform .8s cubic-bezier(.175,.885,.32,1.275);filter:drop-shadow(0 0 14px var(--gold));text-align:center}
+.finale-union-emblem.active{transform:translate(-50%,-50%) scale(1.05);animation:pulse-badge 2s infinite alternate}
+.union-ring-icon{font-size:22px}
+.union-text{font-size:10px;font-weight:700;color:var(--gold-light);text-shadow:0 0 8px var(--gold);white-space:nowrap;background:rgba(22,58,41,.92);padding:2px 8px;border-radius:12px;border:1px solid var(--gold);margin-top:2px}
+
+/* Interactive Days Simulator Controller */
+.finale-simulator{margin-top:10px;background:rgba(22,58,41,.75);padding:8px 12px;border-radius:10px;border:1px solid var(--gold);width:min(420px,92vw);box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.sim-title{font-size:11px;color:var(--gold-light);font-weight:700;margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:4px}
+.sim-slider-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.sim-slider{flex:1;accent-color:var(--gold);height:4px;cursor:pointer}
+.sim-presets{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+.sim-btn{background:rgba(31,95,67,.8);border:1px solid var(--gold);color:#fff;padding:3px 8px;border-radius:12px;font:600 10.5px "Cormorant Garamond",serif;cursor:pointer;transition:.2s}
+.sim-btn:hover,.sim-btn.active{background:var(--gold);color:var(--emerald-dark);font-weight:700}
+
+
+/* Hero section: World-Class Royal Palace Emerald Atmosphere */
+.hero{position:relative;min-height:100vh;min-height:100dvh;padding:clamp(16px,2.5vh,30px) 16px clamp(24px,3.5vh,40px);display:flex;flex-direction:column;align-items:center;justify-content:space-between;box-sizing:border-box;color:var(--ivory);background:radial-gradient(ellipse at 50% 30%,#1F5F43 0%,#143525 55%,#0b1e15 100%);overflow:hidden}
+
+/* Architectural Royal Islamic Palace Arch & Volumetric Light Rays */
+.royal-palace-backdrop{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 40%,rgba(212,175,55,.12) 0%,transparent 65%),repeating-linear-gradient(60deg,transparent,transparent 30px,rgba(212,175,55,.03) 31px,rgba(212,175,55,.03) 32px),repeating-linear-gradient(-60deg,transparent,transparent 30px,rgba(212,175,55,.03) 31px,rgba(212,175,55,.03) 32px);opacity:.9}
+.royal-arch-frame{position:absolute;top:12px;bottom:12px;left:12px;right:12px;border:1px solid rgba(212,175,55,.35);border-radius:14px;pointer-events:none}
+.royal-arch-frame:before{content:"";position:absolute;inset:5px;border:1px dashed rgba(212,175,55,.2);border-radius:10px}
+.palace-light-rays{position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(circle at 50% 25%,rgba(244,227,178,.14) 0%,rgba(212,175,55,.04) 40%,transparent 70%);animation:ray-pulse 6s ease-in-out infinite alternate}
+@keyframes ray-pulse{0%{opacity:.7;transform:scale(.98)}100%{opacity:1;transform:scale(1.04)}}
+
+/* Floating Rose Petals & Golden Stardust Canvas */
+.petals-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+
+/* Swaying 3D Royal Islamic Lanterns (Fanoos) */
+.fanoos-lantern{position:absolute;top:0;z-index:7;pointer-events:none;display:flex;flex-direction:column;align-items:center;transform-origin:top center;animation:lantern-sway 4.8s ease-in-out infinite alternate;filter:drop-shadow(0 10px 25px rgba(0,0,0,.6))}
+.lantern-left{left:clamp(14px,3.5vw,55px);animation-delay:-1.2s}
+.lantern-right{right:clamp(14px,3.5vw,55px);animation-duration:5.4s}
+@keyframes lantern-sway{0%{transform:rotate(-6deg)}100%{transform:rotate(6deg)}}
+.lantern-chain{width:2px;height:clamp(45px,7vh,85px);background:linear-gradient(180deg,rgba(212,175,55,.8),var(--gold));box-shadow:0 0 6px rgba(212,175,55,.5)}
+.lantern-body{display:flex;flex-direction:column;align-items:center;position:relative}
+.lantern-dome{width:36px;height:16px;background:linear-gradient(180deg,#F4E3B2,var(--gold));clip-path:polygon(50% 0%,100% 100%,0% 100%);border-radius:2px}
+.lantern-cage{position:relative;width:40px;height:50px;background:rgba(22,58,41,.9);border:2px solid var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 22px rgba(212,175,55,.6)}
+.lantern-flame{width:12px;height:20px;background:radial-gradient(ellipse at 50% 60%,#fff 0%,#ffea79 45%,#ff9800 100%);border-radius:50% 50% 35% 35%;box-shadow:0 0 16px 6px rgba(255,200,50,.85);animation:flame-flicker 1.8s ease-in-out infinite alternate}
+@keyframes flame-flicker{0%{transform:scale(.9) skewX(-2deg);opacity:.85}100%{transform:scale(1.1) skewX(2deg);opacity:1}}
+.lantern-base{width:34px;height:10px;background:linear-gradient(180deg,var(--gold),#8f7012);border-radius:0 0 4px 4px}
+.lantern-tassel{width:3px;height:16px;background:var(--gold);margin-top:1px;position:relative}
+.lantern-tassel:after{content:"✦";position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--gold)}
+
+.hero>*{position:relative;z-index:4}
+.hero>.fanoos-lantern{position:absolute!important;top:0;z-index:7}
+.hero>.petals-canvas{position:absolute!important;inset:0;width:100%;height:100%;z-index:3}
+.hero>.palace-light-rays{position:absolute!important;inset:0;z-index:1}
+.hero>.royal-palace-backdrop{position:absolute!important;inset:0;z-index:0}
+.hero>.royal-arch-frame{position:absolute!important;z-index:1}
+
+/* Royal Monogram Crest */
+.hero-top-crest{display:flex;flex-direction:column;align-items:center;gap:3px;margin-bottom:clamp(2px,0.6vh,6px)}
+.royal-crest-banner{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto}
+.crest-line{width:clamp(25px,6vw,45px);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.crest-line.r{background:linear-gradient(90deg,var(--gold),transparent)}
+.crest-pill{display:flex;align-items:center;gap:6px;padding:3px 14px;background:rgba(212,175,55,.14);border:1px solid rgba(212,175,55,.45);border-radius:4px;font-family:var(--font-royal);font-size:clamp(9.5px,1.3vh,11px);font-weight:700;letter-spacing:2.5px;color:var(--gold-light);text-transform:uppercase}
+
+.bis{font:400 clamp(20px,3.2vh,30px) var(--font-arabic);color:var(--gold);margin:2px 0 0;text-shadow:0 0 20px var(--gold-glow);letter-spacing:1px}
+
+/* Separate Bride & Groom Top-to-Center Stage (Cathedral Arched Cameos) */
+.couple-hero-stage{position:relative;width:min(680px,96vw);height:clamp(175px,24vh,220px);margin:clamp(2px,0.8vh,8px) auto;display:flex;align-items:center;justify-content:center}
+.connecting-love-arc{position:absolute;top:32%;left:10%;width:80%;height:90px;pointer-events:none;z-index:3}
+.pulsing-arc{animation:dash-flow 3s linear infinite}
+@keyframes dash-flow{to{stroke-dashoffset:-20}}
+
+.couple-card{position:absolute;top:5px;width:clamp(105px,14vw,135px);display:flex;flex-direction:column;align-items:center;transition:left 1s cubic-bezier(.22,1,.36,1),right 1s cubic-bezier(.22,1,.36,1),transform 1.3s cubic-bezier(.22,1,.36,1);cursor:pointer;z-index:5}
+
+/* Dynamic Entrance Swoop from Top Corners */
+.bride-card{left:8%;transform:translate(-140px,-60px) scale(0.85) rotate(-6deg);opacity:0;transition:all 1.6s cubic-bezier(.16,1,.3,1)}
+.groom-card{right:8%;transform:translate(140px,-60px) scale(0.85) rotate(6deg);opacity:0;transition:all 1.6s cubic-bezier(.16,1,.3,1)}
+.go .bride-card{transform:translate(0,0) scale(1) rotate(0deg);opacity:1}
+.go .groom-card{transform:translate(0,0) scale(1) rotate(0deg);opacity:1}
+
+.cameo-aura{position:absolute;top:-8px;left:-8px;right:-8px;bottom:-8px;border-radius:65px 65px 14px 14px;background:radial-gradient(circle,rgba(212,175,55,.45) 0%,rgba(31,95,67,0) 70%);filter:blur(8px);z-index:-1;animation:aura-pulse 3.5s ease-in-out infinite alternate}
+@keyframes aura-pulse{0%{opacity:.5;transform:scale(.95)}100%{opacity:1;transform:scale(1.08)}}
+
+.couple-cameo{position:relative;width:clamp(92px,12vw,120px);height:clamp(124px,16.5vh,158px);border-radius:60px 60px 10px 10px;overflow:hidden;border:2.5px solid var(--gold);box-shadow:0 14px 38px rgba(0,0,0,.65),0 0 25px rgba(212,175,55,.4);background:#102e20;transition:transform .4s cubic-bezier(.2,1,.3,1),box-shadow .4s}
+.cameo-filigree-ring{position:absolute;inset:-3px;border-radius:inherit;border:2px dashed rgba(244,227,178,.7);pointer-events:none;animation:filigree-spin 22s linear infinite;z-index:2}
+@keyframes filigree-spin{100%{transform:rotate(360deg)}}
+.cameo-inner-border{position:absolute;inset:4px;border:1px dashed rgba(212,175,55,.5);border-radius:54px 54px 7px 7px;pointer-events:none;z-index:2}
+.couple-cameo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.couple-card:hover .couple-cameo{transform:scale(1.06) translateY(-4px);box-shadow:0 20px 48px rgba(0,0,0,.75),0 0 32px var(--gold-bright)}
+.couple-card:hover .couple-cameo img{transform:scale(1.09)}
+.card-caption{display:flex;flex-direction:column;align-items:center;margin-top:4px}
+.card-name{font-size:clamp(13px,1.8vw,16px);font-weight:700;color:var(--gold-light);letter-spacing:2px;font-family:var(--font-royal);text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.card-role-sub{font-size:9.5px;font-weight:600;color:var(--sage-light);letter-spacing:2px;text-transform:uppercase;font-family:var(--font-sans);margin-top:1px}
+
+/* Central Interlocking Rings & Live Days-to-Union Badge */
+.royal-union-insignia{position:absolute;top:38%;left:50%;transform:translate(-50%,-50%);cursor:pointer;z-index:8;display:flex;flex-direction:column;align-items:center;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
+.royal-union-insignia:hover{transform:translate(-50%,-50%) scale(1.12)}
+.royal-union-insignia.active{animation:pulse-insignia 2.5s infinite alternate}
+@keyframes pulse-insignia{0%{transform:translate(-50%,-50%) scale(1.04);filter:drop-shadow(0 0 14px var(--gold))}100%{transform:translate(-50%,-50%) scale(1.16);filter:drop-shadow(0 0 28px var(--gold-bright))}}
+.insignia-rings{font-size:clamp(26px,4vh,34px);line-height:1;filter:drop-shadow(0 0 16px var(--gold));animation:ring-float 3s ease-in-out infinite alternate}
+@keyframes ring-float{0%{transform:translateY(0) scale(1)}100%{transform:translateY(-5px) scale(1.06)}}
+.insignia-badge{font-family:var(--font-royal);font-size:clamp(9.5px,1.3vh,11px);font-weight:700;letter-spacing:1.5px;color:var(--gold-light);text-transform:uppercase;background:rgba(18,51,35,.92);backdrop-filter:blur(8px);padding:3px 12px;border:1.5px solid var(--gold);border-radius:20px;margin-top:5px;box-shadow:0 6px 18px rgba(0,0,0,.5),0 0 15px rgba(212,175,55,.3);white-space:nowrap}
+.insignia-sub{font-family:var(--font-sans);font-size:8.5px;color:var(--sage-light);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+
+.pre{font-family:var(--font-serif);font-size:clamp(12px,1.6vh,15px);font-style:italic;color:var(--ivory);margin:clamp(3px,0.6vh,8px) auto;max-width:620px;line-height:1.4;text-align:center}
+
+/* Haute-Couture Calligraphy with 24K Gold Sheen Sweep */
+.hero-names-wrap{margin:clamp(2px,0.8vh,8px) auto;display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,18px)}
+.hero-name-calligraphy{font-family:var(--font-script);font-size:clamp(44px,6.8vw,74px);line-height:0.95;background:linear-gradient(135deg,#B8860B 0%,#D4AF37 25%,#FFF6D5 50%,#D4AF37 75%,#AA7C11 100%);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 22px rgba(212,175,55,.5));animation:gold-sheen 6s linear infinite;padding:0 6px;font-weight:400}
+@keyframes gold-sheen{0%{background-position:0% center}100%{background-position:250% center}}
+.hero-names-amp{font-family:var(--font-royal);font-size:clamp(15px,2.2vw,22px);color:var(--gold-light);letter-spacing:3px;font-weight:600;opacity:.95;text-shadow:0 0 16px var(--gold-glow)}
+
+/* Imperial Royal Gold Cartouche */
+.royal-date-cartouche{position:relative;margin:clamp(3px,0.8vh,8px) auto;padding:clamp(6px,1.2vh,10px) clamp(16px,2.8vw,26px);background:rgba(18,51,35,.85);backdrop-filter:blur(14px);border:1.5px solid var(--gold);clip-path:polygon(12px 0%,calc(100% - 12px) 0%,100% 12px,100% calc(100% - 12px),calc(100% - 12px) 100%,12px 100%,0% calc(100% - 12px),0% 12px);box-shadow:0 8px 28px rgba(0,0,0,.45),inset 0 0 20px rgba(212,175,55,.2);max-width:540px;animation:glow-cartouche 4s infinite alternate}
+@keyframes glow-cartouche{0%{box-shadow:0 8px 28px rgba(0,0,0,.45),inset 0 0 12px rgba(212,175,55,.12)}100%{box-shadow:0 12px 38px rgba(212,175,55,.32),inset 0 0 26px rgba(212,175,55,.26)}}
+.cartouche-date{font-family:var(--font-royal);font-size:clamp(13px,2vw,17px);font-weight:700;color:var(--gold-light);letter-spacing:2px;text-transform:uppercase}
+.cartouche-sub{font-family:var(--font-sans);font-size:clamp(9.5px,1.3vw,11.5px);font-weight:600;color:var(--sage-light);letter-spacing:1.6px;text-transform:uppercase;margin-top:2px}
+
+.pre,.hero-names-wrap,.royal-date-cartouche{opacity:0}
+.go .pre{animation:up 1.2s .3s forwards}
+.go .hero-names-wrap{animation:up 1.2s .6s forwards}
+.go .royal-date-cartouche{animation:up 1.2s 1s forwards,glow-cartouche 4s 2.2s infinite alternate}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* Grand Luxury Scroll Medallion */
+.scroll{position:relative;margin:10px auto 4px;color:var(--gold-light);display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;text-decoration:none;z-index:10;transition:transform .3s ease}
+.scroll:hover{transform:translateY(3px)}
+.scroll-medallion{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gold);background:rgba(22,58,41,.85);backdrop-filter:blur(6px);box-shadow:0 0 18px rgba(212,175,55,.4);display:flex;align-items:center;justify-content:center;animation:medallion-pulse 2.2s infinite alternate}
+@keyframes medallion-pulse{0%{box-shadow:0 0 10px rgba(212,175,55,.3);transform:scale(1)}100%{box-shadow:0 0 25px rgba(212,175,55,.75);transform:scale(1.08)}}
+.scroll-arrow-anim{font-size:15px;color:var(--gold-bright);animation:arrow-bounce 1.6s ease-in-out infinite}
+@keyframes arrow-bounce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+.scroll-label{font-family:var(--font-royal);font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-light);opacity:.9;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.rib{overflow:hidden;white-space:nowrap;padding:5px 0;font:700 9.5px var(--font-royal);letter-spacing:1.5px;text-transform:uppercase;color:var(--emerald-dark);background:linear-gradient(90deg,var(--gold-light),var(--sage-light),var(--gold-light))}
+.rib span{display:inline-block;padding-left:100%;animation:mq 32s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+
+section{padding:28px 14px;max-width:560px;margin:0 auto}
+.dk{max-width:none;background:radial-gradient(circle at 50% 30%,#1F5F43 0%,#123323 55%,#0a1d14 100%);color:var(--ivory)}
+h2{margin:0 0 4px;font:700 clamp(17px,2.4vw,21px) var(--font-royal);color:var(--emerald-deep);letter-spacing:1.5px;text-transform:uppercase}.dk h2{color:var(--gold)}
+h2.t>.ar{font-size:15px;letter-spacing:0.5px;margin-top:2px;font-weight:600;font-family:var(--font-arabic)}
+h3{font-family:var(--font-royal);letter-spacing:.8px}
+section > p.t{font-size:12.5px;color:#555;margin:2px auto 10px;max-width:420px;line-height:1.4}
+.dk > p.t{color:var(--sage-light)}
+
+/* Countdown Rings: Refined & Compact */
+.cd{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0 10px}
+.rg{position:relative;width:58px;display:flex;flex-direction:column;align-items:center}
+.rg svg{width:100%;transform:rotate(-90deg);filter:drop-shadow(0 2px 5px rgba(0,0,0,.3))}
+.rg .bg{fill:none;stroke:rgba(212,175,55,.18);stroke-width:3.5}
+.rg .fg{fill:none;stroke:var(--gold);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:213.6;transition:stroke-dashoffset 1s linear;filter:drop-shadow(0 0 4px var(--gold))}
+.rg:nth-child(even) .fg{stroke:var(--gold-bright);filter:drop-shadow(0 0 5px var(--gold-bright))}
+.rg b{position:absolute;left:0;right:0;top:14px;font-size:16px;line-height:1;font-family:var(--font-royal);font-weight:700;color:var(--gold-light)}
+.rg .t{font-size:8px;font-family:var(--font-sans);letter-spacing:1px;text-transform:uppercase;color:var(--sage-light);margin-top:2px;font-weight:600}
+.pop{animation:pop .5s}@keyframes pop{40%{transform:scale(1.15);color:var(--gold-bright)}}
+
+/* High-Society Royal Buttons */
+.btn{display:inline-block;margin-top:10px;padding:7px 18px;background:linear-gradient(135deg,#1F5F43,#123323);color:#fff;border:1px solid var(--gold);border-radius:4px;font:700 10.5px var(--font-royal);letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;transition:.3s;box-shadow:0 3px 10px rgba(18,51,35,.25)}
+.btn:hover{background:var(--gold-foil);color:var(--emerald-dark);transform:translateY(-2px);box-shadow:0 4px 14px var(--gold-glow)}
+.btn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:rgba(255,255,255,.3);transform:skewX(-20deg);animation:sweep 3.5s infinite}
+@keyframes sweep{to{left:130%}}
+
+/* timeline */
+.tl{position:relative;max-width:420px;margin:12px auto 0;padding-left:26px;text-align:left}
+.tl:before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(var(--emerald-deep),var(--gold));animation:grow linear both;animation-timeline:view();animation-range:entry 10% cover 55%;transform-origin:top}
+@keyframes grow{from{transform:scaleY(0)}}
+.tl article{position:relative;margin-bottom:10px}
+.tl article:before{content:"";position:absolute;left:-24px;top:13px;width:9px;height:9px;background:var(--gold);border:2px solid var(--emerald-dark);transform:rotate(45deg);animation:dia 2s infinite alternate}
+@keyframes dia{to{background:var(--sage-light)}}
+.tc{padding:10px 14px;background:#fff;border:1px solid var(--sage-light);border-radius:6px;box-shadow:0 4px 14px rgba(18,51,35,.06);transition:transform .25s,box-shadow .25s,border-color .25s}
+.tc:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(18,51,35,.1);border-color:var(--gold)}
+.tc h3{margin:1px 0 2px;font-size:14.5px;color:var(--emerald-dark);font-family:var(--font-royal);letter-spacing:.8px}
+.tc small{display:block;color:var(--emerald-med);font-family:var(--font-sans);font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.tc p{margin:2px 0 0;font-size:12px;color:#444;line-height:1.35}
+
+/* venue */
+.venue{position:relative;padding:16px 18px;max-width:440px;margin:12px auto 0;border-radius:8px;background:rgba(18,51,35,.88);border:1px solid var(--gold);backdrop-filter:blur(10px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.venue b{font-family:var(--font-royal);letter-spacing:1.2px;text-transform:uppercase;font-size:16px;display:block}
+.venue p{font-family:var(--font-sans);font-size:12.5px;letter-spacing:0.2px;margin:4px 0 10px;line-height:1.4}
+.venue .pin{font-size:18px}
+
+/* Couple Card Showcase Section */
+.couple-card-wrap{margin:10px auto;max-width:320px;position:relative;padding:8px;background:#fff;border-radius:8px;border:1px solid var(--gold);box-shadow:0 6px 20px rgba(18,51,35,.08)}
+.couple-img{width:100%;height:190px;object-fit:cover;border-radius:5px;display:block;box-shadow:0 4px 12px rgba(0,0,0,.12);cursor:pointer;transition:transform .4s}
+.couple-img:hover{transform:scale(1.02)}
+.couple-quote{margin-top:6px;font-style:italic;color:var(--emerald-deep);font-size:12.5px;line-height:1.4;font-family:var(--font-serif)}
+
+/* Excitement Section */
+.excitement-wrap{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0}
+.reaction-btn{background:#fff;border:1px solid var(--sage-light);padding:4px 10px;border-radius:18px;cursor:pointer;font-size:11.5px;color:var(--emerald-dark);transition:all .2s;display:flex;align-items:center;gap:4px}
+.reaction-btn:hover,.reaction-btn:active{background:var(--green-light);border-color:var(--emerald-deep);transform:scale(1.04)}
+.reaction-btn span{font-size:11px}
+.hearts-counter{font-size:13px;font-weight:700;color:var(--emerald-deep);margin-top:6px}
+
+/* Memories & Wishes Live Book */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:10px;text-align:left}
+.memory-card{background:#fff;border:1px solid var(--sage-light);border-radius:8px;padding:10px 12px;box-shadow:0 3px 10px rgba(22,58,41,.05);transition:all .3s;position:relative}
+.memory-card:hover{transform:translateY(-2px);border-color:var(--gold)}
+.memory-card .author{font-weight:700;color:var(--emerald-dark);font-size:13px}
+.memory-card .text{margin:3px 0;color:#333;font-size:11.5px;line-height:1.4}
+.memory-card small{font-size:9.5px;color:var(--sage-soft)}
+
+/* Voice Recorder Box */
+.voice-recorder-box{background:var(--green-light);border:1px dashed var(--emerald-med);padding:6px 10px;border-radius:6px;margin-top:4px;text-align:center}
+.rec-btn{background:var(--emerald-deep);color:#fff;border:0;padding:5px 12px;border-radius:14px;cursor:pointer;font:600 11px inherit}
+.rec-btn.recording{background:#c0392b;animation:pulse-red 1s infinite}
+@keyframes pulse-red{0%,100%{opacity:1}50%{opacity:.6}}
+
+/* Command Assistant Modal */
+.cmd-modal{position:fixed;inset:0;z-index:99;background:rgba(22,58,41,.85);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:16px}
+.cmd-modal.active{display:flex}
+.cmd-box{background:#fff;width:min(420px,94vw);border-radius:12px;border:1px solid var(--gold);padding:16px;box-shadow:0 14px 35px rgba(0,0,0,.3);text-align:left}
+.cmd-input{width:100%;padding:8px 10px;border:1px solid var(--sage-light);border-radius:8px;font-size:13px;outline:none}
+.cmd-input:focus{border-color:var(--emerald-deep)}
+.cmd-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.chip{background:var(--green-light);color:var(--emerald-dark);padding:4px 9px;border-radius:14px;font-size:11.5px;cursor:pointer;border:1px solid var(--sage-light);transition:.2s}
+.chip:hover{background:var(--emerald-deep);color:#fff}
+
+form{display:grid;gap:6px;max-width:340px;margin:10px auto 0;text-align:left}
+input,select,textarea{width:100%;padding:7px 10px;font:inherit;font-size:12px;color:var(--emerald-dark);background:#fff;border:1px solid var(--sage-light);border-radius:6px;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--emerald-deep);outline:none;box-shadow:0 0 0 2px rgba(31,95,67,.15)}
+
+footer{padding:22px 14px 28px;background:var(--emerald-dark);color:var(--ivory);text-align:center}
+footer .a{font:400 20px Amiri,serif;margin:0;background:linear-gradient(100deg,var(--gold) 30%,#fff 50%,var(--gold) 70%);background-size:220%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 4s linear infinite}
+footer .t{font-size:11.5px;line-height:1.45;margin-top:6px}
+@keyframes sh{to{background-position:-220% 0}}
+
+#cf{position:fixed;inset:0;z-index:95;pointer-events:none}
+.sp{position:fixed;pointer-events:none;z-index:80;color:var(--gold);font-size:14px;animation:sp .9s forwards}
+@keyframes sp{to{opacity:0;transform:translateY(26px) scale(.3) rotate(140deg)}}
+
+/* =========================================================
+   OUT-OF-THE-BOX LUXURY 3D SCROLL REVEAL SYSTEM
+   Zero side slides — 3D royal depth, golden aurora & sacred unfurl
+   ========================================================= */
+
+.rv {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(15deg) translateY(32px) scale(0.95);
+  filter: blur(5px) brightness(0.9);
+  transform-origin: 50% 0%;
+  transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 1.2s ease;
+  will-change: transform, opacity, filter;
+}
+
+.rv.in {
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
+  filter: blur(0px) brightness(1);
+}
+
+/* Staggered cascades for child cards */
+.tl article:nth-child(1) { transition-delay: 0.1s; }
+.tl article:nth-child(2) { transition-delay: 0.25s; }
+.tl article:nth-child(3) { transition-delay: 0.4s; }
+
+/* 24K Gold Specular Light Beam Sweep on Revealed Cards */
+.couple-card-wrap, .tc, .venue, .memory-card, form#f {
+  position: relative;
+  overflow: hidden;
+}
+
+.couple-card-wrap:after, .tc:after, .venue:after, .memory-card:after, form#f:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 245, 215, 0) 20%,
+    rgba(212, 175, 55, 0.25) 45%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(212, 175, 55, 0.25) 55%,
+    rgba(255, 245, 215, 0) 80%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s ease;
+  z-index: 4;
+}
+
+.couple-card-wrap.rv.in:after,
+.tc.rv.in:after,
+.venue.rv.in:after,
+.memory-card.rv.in:after,
+form#f.rv.in:after,
+.tl article.rv.in .tc:after,
+.memory-grid.rv.in .memory-card:after {
+  opacity: 1;
+  transform: rotate(25deg) translateX(380%);
+  transition-delay: 0.35s;
+}
+
+/* Sacred Golden Heading Bloom & Calligraphy Radiance */
+h2.rv {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+h2.rv:before {
+  content: "✦ ☪ ✦";
+  display: block;
+  font-size: 10.5px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  opacity: 0;
+  transform: scale(0.4) rotate(-35deg);
+  transition: transform 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.15s, opacity 0.6s ease 0.15s;
+  text-shadow: 0 0 10px var(--gold-glow);
+  margin-bottom: 2px;
+}
+
+h2.rv.in:before {
+  opacity: 0.95;
+  transform: scale(1) rotate(0deg);
+}
+
+h2.rv:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  margin: 4px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+  box-shadow: 0 0 8px var(--gold);
+  transition: width 1.1s cubic-bezier(0.2, 1, 0.3, 1) 0.3s;
+}
+
+h2.rv.in:after {
+  width: min(150px, 65%);
+}
+
+h2.rv.in span.en {
+  animation: gold-text-ignite 1.2s ease-out forwards;
+}
+
+@keyframes gold-text-ignite {
+  0% { text-shadow: 0 0 0 transparent; }
+  50% { text-shadow: 0 0 16px rgba(212,175,55,0.7); }
+  100% { text-shadow: 0 0 5px rgba(212,175,55,0.25); }
+}
+
+/* Countdown Circles Celestial Astrolabe Bloom */
+.cd.rv .rg {
+  opacity: 0;
+  transform: scale(0.65) rotate(-35deg);
+  transition: transform 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.7s ease;
+}
+
+.cd.rv.in .rg {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.cd.rv.in .rg:nth-child(1) { transition-delay: 0.12s; }
+.cd.rv.in .rg:nth-child(2) { transition-delay: 0.24s; }
+.cd.rv.in .rg:nth-child(3) { transition-delay: 0.36s; }
+.cd.rv.in .rg:nth-child(4) { transition-delay: 0.48s; }
+
+/* Golden Sonar Pulse on Countdown */
+.cd.rv.in .rg:after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  opacity: 0;
+  animation: ring-sonar 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) 0.8s;
+  pointer-events: none;
+}
+
+@keyframes ring-sonar {
+  0% { transform: scale(0.9); opacity: 0.85; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+/* Timeline 3D Envelope Unfolding (Zero Side Sliding) */
+.tl article.rv {
+  opacity: 0;
+  transform: perspective(700px) rotateX(20deg) translateY(22px) scale(0.96);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.75s ease;
+}
+
+.tl article.rv.in {
+  opacity: 1;
+  transform: perspective(700px) rotateX(0deg) translateY(0) scale(1);
+}
+
+.tl article.rv.in:before {
+  animation: diamond-ignite 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes diamond-ignite {
+  0% { transform: rotate(45deg) scale(0.6); box-shadow: 0 0 0 rgba(212,175,55,0); }
+  60% { transform: rotate(45deg) scale(1.35); box-shadow: 0 0 16px 4px var(--gold-glow); background: #fff; }
+  100% { transform: rotate(45deg) scale(1); box-shadow: 0 0 8px var(--gold); background: var(--gold); }
+}
+
+/* Venue Illuminated Breathing Atmosphere */
+.venue.rv.in {
+  animation: venue-breathing 4s ease-in-out infinite alternate;
+}
+
+@keyframes venue-breathing {
+  0% { border-color: rgba(212,175,55,0.6); box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 12px rgba(212,175,55,0.15); }
+  100% { border-color: rgba(247,231,190,0.9); box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 24px rgba(212,175,55,0.35); }
+}
+
+/* Memory Cards Soft Staggered Floating */
+.memory-grid.rv .memory-card {
+  opacity: 0;
+  transform: perspective(600px) translateY(20px) scale(0.97);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.7s ease;
+}
+
+.memory-grid.rv.in .memory-card:nth-child(1) { opacity: 1; transform: perspective(600px) translateY(0) scale(1); transition-delay: 0.15s; }
+.memory-grid.rv.in .memory-card:nth-child(2) { opacity: 1; transform: perspective(600px) translateY(0) scale(1); transition-delay: 0.3s; }
+
+/* Floating Blessing Emoji Fountains on Reaction Click */
+.floating-blessing {
+  position: fixed;
+  pointer-events: none;
+  z-index: 96;
+  font-size: 20px;
+  animation: float-blessing-anim 2.2s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+  filter: drop-shadow(0 0 8px rgba(212,175,55,0.5));
+}
+
+@keyframes float-blessing-anim {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5) rotate(0deg); }
+  30% { transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% - 40px)) scale(1.25) rotate(var(--dr, 10deg)); }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--dx2, 0px)), calc(-50% - 130px)) scale(0.8) rotate(var(--dr2, -15deg)); }
+}
+
+/* Secret ring easter egg modal */
+.modal-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;padding:16px}
+.modal-overlay.active{display:flex}
+.modal-card{background:#fff;padding:30px;border-radius:20px;border:2px solid var(--gold);max-width:440px;text-align:center;position:relative}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none;clip-path:none;filter:none}.dr{fill:var(--gold);stroke-dashoffset:0}.pre,.dt,.dd,.amp{opacity:1}}
+</style>
+</head>
+<body class="ea">
+<canvas id="cf"></canvas>
+<audio id="bg-music" loop preload="auto">
+  <source src="arabic-wedding-song.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg">
+  <source src="https://archive.org/download/MHRZEN/maher%20zain%20-%20baraka%20allahu%20lakuma.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Language Navigation -->
+<nav class="langs" aria-label="Language">
+  <button class="lb" data-l="ea" aria-pressed="true">English · العربية</button>
+  <button class="lb" data-l="en" aria-pressed="false">English</button>
+  <button class="lb" data-l="ar" aria-pressed="false">العربية</button>
+  <button class="lb" data-l="ml" aria-pressed="false">മലയാളം</button>
+</nav>
+
+<!-- Floating Controls -->
+<button class="music-toggle paused" id="musicToggle" aria-label="Toggle Romantic Arabic Wedding Song" title="Play / Pause Romantic Arabic Song">
+  <div class="music-waves"><span></span><span></span><span></span></div>
+</button>
+<button class="cmd-fab" id="cmdFab">✨ Assistant</button>
+
+<!-- Music Now Playing Floating Notification -->
+<div class="music-now-playing" id="musicNowPlaying" role="status">
+  <div class="mnp-icon">🎵</div>
+  <div class="mnp-info">
+    <div class="mnp-title">Baraka Allahu Lakuma</div>
+    <div class="mnp-artist">Maher Zain • Arabic Wedding Song</div>
+  </div>
+  <div class="mnp-eq"><span></span><span></span><span></span><span></span></div>
+</div>
+
+<!-- Floating Couple Scroll Companion (Travels & moves closer as user scrolls contents) -->
+<div class="scroll-couple-companion" id="scrollCoupleCompanion" aria-hidden="true">
+  <div class="companion-avatar" id="companionBride" title="Bride · Fathima">
+    <img src="bride.jpg" alt="Bride - Fathima" onerror="this.src='couple-image.jpg'" />
+    <span class="companion-name">Fathima</span>
+  </div>
+  <div class="companion-center">
+    <div class="companion-track">
+      <div class="companion-fill" id="companionFill"></div>
+    </div>
+    <div class="companion-indicator" id="companionIndicator">Journeying Closer • 0%</div>
+  </div>
+  <div class="companion-avatar" id="companionGroom" title="Groom · Irshad">
+    <span class="companion-name">Irshad</span>
+    <img src="groom.jpg" alt="Groom - Irshad" onerror="this.src='couple-image.jpg'" />
+  </div>
+</div>
+
+<!-- Command Assistant Modal -->
+<div class="cmd-modal" id="cmdModal">
+  <div class="cmd-box">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <h3 style="margin:0;color:var(--emerald-dark)">✨ Quick Navigator</h3>
+      <button id="closeCmd" style="background:none;border:0;font-size:24px;cursor:pointer">&times;</button>
+    </div>
+    <input type="text" class="cmd-input" id="cmdInput" placeholder="Type command e.g., 'memories', 'story', 'venue'..." />
+    <div class="cmd-chips">
+      <span class="chip" data-cmd="memories">Our Memories</span>
+      <span class="chip" data-cmd="story">Couple Photo</span>
+      <span class="chip" data-cmd="countdown">Days Left</span>
+      <span class="chip" data-cmd="celebrations">Schedule</span>
+      <span class="chip" data-cmd="venue">Venue Location</span>
+      <span class="chip" data-cmd="rsvp">Send Wish / RSVP</span>
+      <span class="chip" data-cmd="finale">Couple Union Stage</span>
+      <span class="chip" data-cmd="music">Toggle Music</span>
+    </div>
+  </div>
+</div>
+
+<!-- Secret Message Easter Egg Modal -->
+<div class="modal-overlay" id="secretModal">
+  <div class="modal-card">
+    <button id="closeSecret" style="position:absolute;top:12px;right:16px;background:none;border:0;font-size:24px;cursor:pointer">&times;</button>
+    <div style="font-size:44px">💍✨</div>
+    <h3 style="color:var(--emerald-dark);margin:10px 0">Two Souls, One Heart</h3>
+    <p style="font-style:italic;color:var(--emerald-med)">"And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy."</p>
+    <p style="font-size:14px;color:#888">— Surah Ar-Rum [30:21]</p>
+  </div>
+</div>
+
+<!-- Islamic Royal Entrance Gate Landing Screen (Replaces Lamp with Grand Islamic Culture Gates) -->
+<div id="intro" class="islamic-intro-screen" aria-label="Islamic Wedding Portal">
+  <div class="portal-container">
+    <!-- Crescent Moon & 8-Point Star Emblem -->
+    <div class="portal-crest">
+      <div class="crest-moon"></div>
+      <div class="crest-star">✦</div>
+    </div>
+
+    <!-- Sacred Bismillah Calligraphy -->
+    <div class="portal-bismillah" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+    <!-- Islamic Moorish Arched Frame with 3D Double Palace Doors -->
+    <div class="islamic-arch-gateway" id="archGateway">
+      <!-- Moorish Arch Golden Filigree Silhouette -->
+      <svg class="arch-overlay-svg" viewBox="0 0 370 110" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="goldArchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#D4AF37"/>
+            <stop offset="50%" stop-color="#F4E3B2"/>
+            <stop offset="100%" stop-color="#D4AF37"/>
+          </linearGradient>
+        </defs>
+        <path d="M 8 110 Q 8 50 65 25 Q 130 8 185 0 Q 240 8 305 25 Q 362 50 362 110" fill="none" stroke="url(#goldArchGrad)" stroke-width="4"/>
+        <path d="M 24 110 Q 24 62 75 38 Q 130 22 185 14 Q 240 22 295 38 Q 346 62 346 110" fill="none" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+      </svg>
+
+      <!-- 3D Double Doors -->
+      <div class="portal-doors-wrapper">
+        <div class="palace-door door-left" id="doorLeft">
+          <div class="door-arabesque"></div>
+          <div class="door-knocker">⚜</div>
+        </div>
+        <div class="palace-door door-right" id="doorRight">
+          <div class="door-arabesque"></div>
+          <div class="door-knocker">⚜</div>
+        </div>
+      </div>
+
+      <!-- Central Golden Medallion Trigger Seal -->
+      <button id="gateDoorBtn" class="gate-seal-btn" aria-label="Tap to open the blessed gates and enter">
+        <div class="seal-icon">🕌</div>
+        <div class="seal-text-ar">ادْخُلُوهَا بِسَلَامٍ</div>
+        <div class="seal-text-en">BISMILLAH</div>
+      </button>
+    </div>
+
+    <!-- Multi-Language Entrance Invitation -->
+    <div class="portal-prompt t">
+      <span class="en">✦ Tap the Sacred Gates to Enter with Bismillah ✦</span>
+      <span class="ar" dir="rtl">✦ المس البوابة الشريفة للدخول ببركة الله ✦</span>
+      <span class="ml">✦ ബിസ്മിയോടെ പ്രവേശിക്കാൻ കവാടത്തിൽ സ്പർശിക്കൂ ✦</span>
+    </div>
+    <div class="portal-sub">🎵 Featuring Maher Zain's Romantic Arabic Wedding Anthem: <em>Baraka Allahu Lakuma</em></div>
+  </div>
+</div>
+
+<!-- Hero Section: Grand Islamic Royal Palace Atmosphere -->
+<header class="hero" id="hero">
+  <!-- Architectural Palace Backdrop & Subtle Volumetric Light Rays -->
+  <div class="royal-palace-backdrop" aria-hidden="true"></div>
+  <div class="royal-arch-frame" aria-hidden="true"></div>
+  <div class="palace-light-rays" aria-hidden="true"></div>
+
+  <!-- Dedicated Romantic Floating Rose Petals & Golden Stardust Canvas -->
+  <canvas id="petalsCanvas" class="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Swaying 3D Ornate Islamic Royal Lanterns (Fanoos) with Flickering Candle Glow -->
+  <div class="fanoos-lantern lantern-left" aria-hidden="true">
+    <div class="lantern-chain"></div>
+    <div class="lantern-body">
+      <div class="lantern-dome"></div>
+      <div class="lantern-cage">
+        <div class="lantern-flame"></div>
+      </div>
+      <div class="lantern-base"></div>
+      <div class="lantern-tassel"></div>
+    </div>
+  </div>
+  <div class="fanoos-lantern lantern-right" aria-hidden="true">
+    <div class="lantern-chain"></div>
+    <div class="lantern-body">
+      <div class="lantern-dome"></div>
+      <div class="lantern-cage">
+        <div class="lantern-flame"></div>
+      </div>
+      <div class="lantern-base"></div>
+      <div class="lantern-tassel"></div>
+    </div>
+  </div>
+
+  <!-- Top Regal Monogram Pill & Sacred Bismillah -->
+  <div class="hero-top-crest">
+    <div class="royal-crest-banner" aria-hidden="true">
+      <div class="crest-line"></div>
+      <div class="crest-pill">
+        <span>☪</span>
+        <span>IRSHAD &amp; FATHIMA · ROYAL NIKAH</span>
+        <span>✦</span>
+      </div>
+      <div class="crest-line r"></div>
+    </div>
+    <p class="bis" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+  </div>
+
+  <!-- Separate Bride & Groom Dynamic Union Stage (Cathedral Cameos + Golden Connecting Arc) -->
+  <div class="couple-hero-stage" id="coupleStage">
+    <!-- Connecting Golden Ribbon of Love (Dynamic SVG Arc) -->
+    <svg class="connecting-love-arc" id="connectingArc" viewBox="0 0 600 120" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="arcGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.2"/>
+          <stop offset="50%" stop-color="#F4E3B2" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.2"/>
+        </linearGradient>
+      </defs>
+      <path id="arcPath" d="M 120 70 Q 300 20 480 70" fill="none" stroke="url(#arcGlowGrad)" stroke-width="2.5" stroke-dasharray="6 4" class="pulsing-arc"/>
+    </svg>
+
+    <!-- Bride Cameo (Animated Entry from Top-Left) -->
+    <div class="couple-card bride-card" id="brideCard" title="Bride - Fathima">
+      <div class="cameo-aura"></div>
+      <div class="couple-cameo">
+        <div class="cameo-filigree-ring"></div>
+        <div class="cameo-inner-border"></div>
+        <img src="bride.jpg" alt="Bride - Fathima" id="brideImg" onerror="this.src='couple-image.jpg'" />
+      </div>
+      <div class="card-caption">
+        <span class="card-name">Fathima</span>
+        <span class="card-role-sub">The Bride</span>
+      </div>
+    </div>
+
+    <!-- Central Interlocking Rings & Live Days-to-Union Badge -->
+    <div class="royal-union-insignia" id="unionBadge" title="Tap for a romantic celebration burst!">
+      <div class="insignia-rings">💍</div>
+      <div class="insignia-badge" id="heroUnionBadge">82 Days to Nikah</div>
+      <div class="insignia-sub">Journeying to Union</div>
+    </div>
+
+    <!-- Groom Cameo (Animated Entry from Top-Right) -->
+    <div class="couple-card groom-card" id="groomCard" title="Groom - Irshad">
+      <div class="cameo-aura"></div>
+      <div class="couple-cameo">
+        <div class="cameo-filigree-ring"></div>
+        <div class="cameo-inner-border"></div>
+        <img src="groom.jpg" alt="Groom - Irshad" id="groomImg" onerror="this.src='couple-image.jpg'" />
+      </div>
+      <div class="card-caption">
+        <span class="card-name">Irshad</span>
+        <span class="card-role-sub">The Groom</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invitation Subtitle -->
+  <p class="t pre">
+    <span class="en">With the blessings of Almighty Allah, we joyfully invite you to celebrate the union of</span>
+    <span class="ar" dir="rtl">بعون الله تعالى، يسعدنا دعوتكم لحضور حفل زفاف</span>
+    <span class="ml">സർവ്വശക്തനായ അല്ലാഹുവിന്റെ അനുഗ്രഹത്തോടെ, ഞങ്ങളുടെ വിവാഹത്തിലേക്ക് നിങ്ങളെ സസ്നേഹം ക്ഷണിക്കുന്നു</span>
+  </p>
+
+  <!-- World-Class Haute-Couture Calligraphy Names with Metallic Gold Shimmer Sweep -->
+  <div class="hero-names-wrap" role="heading" aria-level="1">
+    <span class="hero-name-calligraphy">Irshad</span>
+    <span class="hero-names-amp">✦ &amp; ✦</span>
+    <span class="hero-name-calligraphy">Fathima</span>
+  </div>
+
+  <!-- Imperial Royal Gold Cartouche (Beveled Plaque) -->
+  <div class="royal-date-cartouche" id="heroDateBanner">
+    <div class="cartouche-date t">
+      <span class="en">✦ Sunday · 20 December 2026 ✦</span>
+      <span class="ar" dir="rtl">✦ الأحد ٢٠ ديسمبر ٢٠٢٦ ✦</span>
+      <span class="ml">✦ 2026 ഡിസംബർ 20, ഞായർ ✦</span>
+    </div>
+    <div class="cartouche-sub t">
+      <span class="en">Nikah Ceremony at 11:00 AM · Kozhikode, Kerala</span>
+      <span class="ar" dir="rtl">عقد القران ١١:٠٠ صباحاً · كوزيكود، كيرالا</span>
+      <span class="ml">രാവിലെ 11:00 മണിക്ക് നിക്കാഹ് · കോഴിക്കോട്, കേരളം</span>
+    </div>
+  </div>
+
+  <!-- Grand Luxury Scroll Medallion -->
+  <a href="#story" class="scroll" id="heroScrollBtn" aria-label="Scroll down to unfold our wedding journey">
+    <div class="scroll-medallion">
+      <span class="scroll-arrow-anim">↓</span>
+    </div>
+    <span class="scroll-label">Scroll to Explore</span>
+  </a>
+</header>
+<div class="rib" aria-hidden="true"><span>✦ Barakallahu lakuma wa baraka alaykuma ✦ بارك الله لكما ✦ Join us in celebration ✦ ادعوا لنا بالتوفيق ✦ Barakallahu lakuma wa baraka alaykuma ✦</span></div>
+
+<!-- Temporary Couple Image Showcase Section -->
+<section style="background:var(--ivory)" id="story">
+  <h2 class="t rv wipe"><span class="en">Irshad &amp; Fathima</span><span class="ar" dir="rtl">إرشاد وفاطمة</span><span class="ml">ഇർഷാദ് &amp; ഫാത്തിമ</span></h2>
+  <div class="couple-card-wrap rv blur">
+    <img src="couple-image.jpg" alt="Irshad & Fathima Wedding Couple" class="couple-img" id="coupleImg" onerror="this.src='bride.jpg'" />
+    <p class="couple-quote t"><span class="en">"Bound by faith, united in love, starting our journey together."</span><span class="ar" dir="rtl">"بالمودة والرحمة تبدأ رحلتنا معاً"</span><span class="ml">"സ്നേഹത്താലും വിശ്വാസത്താലും ഒന്നായ ഞങ്ങളുടെ യാത്ര"</span></p>
+  </div>
+</section>
+
+<!-- Countdown Section -->
+<section class="dk" id="countdown">
+  <h2 class="t rv wipe" id="cdTitle"><span class="en">Counting down to the Nikah</span><span class="ar" dir="rtl">العد التنازلي لعقد القران</span><span class="ml">നിക്കാഹിലേക്കുള്ള കൗണ്ട്ഡൗൺ</span></h2>
+  <div class="cd rv z" id="cd" role="timer"></div>
+  <a class="btn t rv blur" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Irshad+%26+Fathima+Nikah&dates=20261220T053000Z/20261220T073000Z&location=Kozhikode,+Kerala"><span class="en">Add to calendar</span><span class="ar" dir="rtl">أضف إلى التقويم</span><span class="ml">കലണ്ടറിൽ ചേർക്കുക</span></a>
+</section>
+
+<!-- Celebrations Section -->
+<section id="celebrations">
+  <h2 class="t rv wipe"><span class="en">The celebrations</span><span class="ar" dir="rtl">الاحتفالات</span><span class="ml">ആഘോഷങ്ങൾ</span></h2>
+  <div class="tl">
+    <article class="rv"><div class="tc"><small class="t"><span class="en">Sat, 19 Dec · 7:00 PM</span><span class="ar" dir="rtl">السبت ١٩ ديسمبر · ٧:٠٠ م</span><span class="ml">ശനി, ഡിസംബർ 19 · വൈകുന്നേരം 7</span></small><h3 class="t"><span class="en">Mailanchi Night</span><span class="ar" dir="rtl">ليلة الحنّاء</span><span class="ml">മൈലാഞ്ചി രാവ്</span></h3><p class="t" style="margin:0"><span class="en">Henna, songs and oppana at the bride's home</span><span class="ar" dir="rtl">حنّاء وأغانٍ وأوبنّا في بيت العروس</span><span class="ml">മൈലാഞ്ചിയും പാട്ടും ഒപ്പനയും</span></p></div></article>
+    <article class="rv"><div class="tc"><small class="t"><span class="en">Sun, 20 Dec · 11:00 AM</span><span class="ar" dir="rtl">الأحد ٢٠ ديسمبر · ١١:٠٠ ص</span><span class="ml">ഞായർ, ഡിസംബർ 20 · രാവിലെ 11</span></small><h3 class="t"><span class="en">Nikah</span><span class="ar" dir="rtl">عقد القران</span><span class="ml">നിക്കാഹ്</span></h3><p class="t" style="margin:0"><span class="en">Juma Masjid, followed by lunch</span><span class="ar" dir="rtl">المسجد الجامع، يليه الغداء</span><span class="ml">ജുമാ മസ്ജിദ്, തുടർന്ന് സദ്യ</span></p></div></article>
+    <article class="rv"><div class="tc"><small class="t"><span class="en">Sun, 20 Dec · 6:30 PM</span><span class="ar" dir="rtl">الأحد ٢٠ ديسمبر · ٦:٣٠ م</span><span class="ml">ഞായർ, ഡിസംബർ 20 · വൈകുന്നേരം 6:30</span></small><h3 class="t"><span class="en">Valima Reception</span><span class="ar" dir="rtl">حفل الوليمة</span><span class="ml">വലീമ സൽക്കാരം</span></h3><p class="t" style="margin:0"><span class="en">Dinner with both families</span><span class="ar" dir="rtl">عشاء مع العائلتين</span><span class="ml">കുടുംബങ്ങളോടൊപ്പം അത്താഴം</span></p></div></article>
+  </div>
+</section>
+
+<!-- Guest Excitement / Happiness Interaction -->
+<section style="background:var(--green-light)" id="excitement">
+  <h2 class="t rv wipe"><span class="en">How Excited Are You?</span><span class="ar" dir="rtl">ما مدى حماسك لحضور الزفاف؟</span><span class="ml">ഞങ്ങളുടെ വിവാഹത്തിൽ എത്രത്തോളം സന്തോഷമുണ്ട്?</span></h2>
+  <p class="t rv"><span class="en">Send your love to the bride and groom</span><span class="ar" dir="rtl">أرسل مشاعرك للعروسين</span><span class="ml">നിങ്ങളുടെ സ്നേഹം അറിയിക്കൂ</span></p>
+  <div class="excitement-wrap rv z">
+    <button class="reaction-btn" data-react="❤️">❤️ <span class="t"><span class="en">Extremely Happy</span><span class="ar" dir="rtl">سعيد جداً</span><span class="ml">വളരെ സന്തോഷം</span></span></button>
+    <button class="reaction-btn" data-react="🥰">🥰 <span class="t"><span class="en">So Happy</span><span class="ar" dir="rtl">فرحان</span><span class="ml">ഏറെ സന്തോഷം</span></span></button>
+    <button class="reaction-btn" data-react="🎉">🎉 <span class="t"><span class="en">Can't Wait</span><span class="ar" dir="rtl">لا أستطيع الانتظار</span><span class="ml">കാത്തിരിക്കാനാവുന്നില്ല</span></span></button>
+    <button class="reaction-btn" data-react="💍">💍 <span class="t"><span class="en">Excited</span><span class="ar" dir="rtl">متحمس</span><span class="ml">ആവേശത്തിൽ</span></span></button>
+    <button class="reaction-btn" data-react="✨">✨ <span class="t"><span class="en">Sending Love</span><span class="ar" dir="rtl">كل الحب</span><span class="ml">സ്നേഹാശംസകൾ</span></span></button>
+  </div>
+  <div class="hearts-counter rv blur" id="heartsDisplay">❤️ <span id="heartsCount">1,248</span> Hearts Sent</div>
+</section>
+
+<!-- Our Memories Section (Digital Memory Book) -->
+<section id="memories">
+  <h2 class="t rv wipe"><span class="en">Our Memories &amp; Wishes</span><span class="ar" dir="rtl">ذكرياتنا وأمنياتنا</span><span class="ml">ഓർമ്മകളും ആശംസകളും</span></h2>
+  <p class="t rv"><span class="en">Share a memory, wish, or voice message with us</span><span class="ar" dir="rtl">شاركنا بركة، ذكوى، أو رسالة صوتية</span><span class="ml">ഒരു നല്ല ഓർമ്മയോ ആശംസയോ ഇവിടെ പങ്കുവെക്കൂ</span></p>
+  
+  <div class="memory-grid rv" id="memoryGrid">
+    <div class="memory-card">
+      <div class="author">Mohammed &amp; Family</div>
+      <div class="text">"Wishing Irshad and Fathima a lifetime of eternal love, happiness, and peace together! Barkallahu lakuma!"</div>
+      <small style="color:var(--sage-soft)">✦ Wedding Wish</small>
+    </div>
+    <div class="memory-card">
+      <div class="author">Ayesha</div>
+      <div class="text">"Can't wait for the Mailanchi night oppana! So happy for you Fathima!"</div>
+      <small style="color:var(--sage-soft)">✦ Favorite Memory</small>
+    </div>
+  </div>
+</section>
+
+<!-- Venue Section -->
+<section class="dk" id="venue">
+  <h2 class="t rv wipe"><span class="en">Venue</span><span class="ar" dir="rtl">المكان</span><span class="ml">വേദി</span></h2>
+  <div class="venue rv">
+    <div class="pn"><span class="pin" aria-hidden="true">📍</span></div>
+    <b class="gold">Crescent Convention Centre</b>
+    <p style="margin:4px 0">Mavoor Road, Kozhikode, Kerala</p>
+    <a class="btn t" target="_blank" rel="noopener" href="https://maps.google.com/?q=Kozhikode+Kerala"><span class="en">Open in Maps</span><span class="ar" dir="rtl">افتح الخريطة</span><span class="ml">മാപ്പിൽ തുറക്കുക</span></a>
+  </div>
+</section>
+
+<!-- RSVP & Message Form -->
+<section id="rsvp">
+  <h2 class="t rv wipe"><span class="en">Will you join us?</span><span class="ar" dir="rtl">هل ستشاركوننا فرحتنا؟</span><span class="ml">ഞങ്ങളോടൊപ്പം ചേരുമോ?</span></h2>
+  <p class="t rv"><span class="en">Please reply by 5 December</span><span class="ar" dir="rtl">يرجى الرد قبل ٥ ديسمبر</span><span class="ml">ഡിസംബർ 5-നകം അറിയിക്കുക</span></p>
+  <form id="f" class="rv blur">
+    <input name="n" required autocomplete="name" data-en="Your name" data-ar="اسمك" data-ml="നിങ്ങളുടെ പേര്">
+    <select name="a"><option value="y" data-en="Yes, InshaAllah I will come" data-ar="نعم، إن شاء الله سأحضر" data-ml="അതെ, ഇൻഷാ അല്ലാഹ് ഞാൻ വരും"></option><option value="n" data-en="Sorry, I cannot make it" data-ar="عذراً، لا أستطيع الحضور" data-ml="ക്ഷമിക്കണം, വരാൻ കഴിയില്ല"></option></select>
+    <select name="g" required><option value="" disabled selected data-en="Number of guests" data-ar="عدد الضيوف" data-ml="അതിഥികളുടെ എണ്ണം"></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+    <textarea name="w" rows="3" data-en="Your wishes or dua (optional)" data-ar="أمنياتك أو دعاؤك (اختياري)" data-ml="ആശംസ / ദുആ (ഓപ്ഷണൽ)"></textarea>
+
+    <!-- Voice Recording Integration -->
+    <div class="voice-recorder-box">
+      <button type="button" class="rec-btn" id="recVoiceBtn">🎙️ Record Voice Wish (Max 20s)</button>
+      <div id="recStatus" style="font-size:14px;color:var(--emerald-dark);margin-top:6px">Tap to record</div>
+      <audio id="audioPreview" controls style="display:none;width:100%;margin-top:8px"></audio>
+    </div>
+
+    <button class="btn t" type="submit"><span class="en">Send RSVP &amp; Memory</span><span class="ar" dir="rtl">إرسال الرد والذكرى</span><span class="ml">സന്ദേശം അയക്കുക</span></button>
+  </form>
+  <div id="ok" aria-live="polite"></div>
+</section>
+
+<!-- Dedicated Bottom Couple Grand Finale Section (ONLY 2 PEOPLE WITHOUT OTHER CONTENTS) -->
+<section id="finale-stage" class="finale-section" aria-label="Couple Union Stage">
+  <div class="finale-moon" aria-hidden="true"></div>
+  
+  <div class="finale-header">
+    <h2 class="finale-title t"><span class="en">The Sacred Union</span><span class="ar" dir="rtl">الرباط المقدس</span><span class="ml">മംഗള സംഗമം</span></h2>
+    <p class="finale-sub t"><span class="en">Two Souls Journeying Closer Day by Day</span><span class="ar" dir="rtl">روحان تقتربان يوماً بعد يوم</span><span class="ml">ഓരോ ദിവസവും പരസ്പരം അടുക്കുന്ന രണ്ട് മനസ്സുകൾ</span></p>
+    
+    <!-- Dynamic Days and Distance Indicator -->
+    <div class="finale-distance-badge" id="finaleDistanceBadge">
+      <span id="finaleDaysText">83 Days to Marriage</span>
+      <span>•</span>
+      <span id="finaleDistanceText">Distance: 83 steps apart</span>
+    </div>
+  </div>
+
+  <!-- Dedicated Couple Dais Stage (ONLY BRIDE & GROOM) -->
+  <div class="finale-stage-dais" id="finaleDais">
+    <!-- Bride Card (Fathima) -->
+    <div class="finale-card" id="finaleBride" title="Bride · Fathima">
+      <div class="finale-portrait-frame">
+        <img src="bride.jpg" alt="Bride - Fathima" onerror="this.src='couple-image.jpg'" />
+      </div>
+      <div class="finale-card-label">Fathima</div>
+      <div class="finale-card-role">The Bride</div>
+    </div>
+
+    <!-- Central Sacred Union Emblem (Glows and pulses when distance reaches 0) -->
+    <div class="finale-union-emblem" id="finaleEmblem">
+      <div class="union-ring-icon">💍</div>
+      <div class="union-text">Two Souls, One Heart</div>
+    </div>
+
+    <!-- Groom Card (Irshad) -->
+    <div class="finale-card" id="finaleGroom" title="Groom · Irshad">
+      <div class="finale-portrait-frame">
+        <img src="groom.jpg" alt="Groom - Irshad" onerror="this.src='couple-image.jpg'" />
+      </div>
+      <div class="finale-card-label">Irshad</div>
+      <div class="finale-card-role">The Groom</div>
+    </div>
+
+    <!-- Dais Carpet & Pedestal Platform -->
+    <div class="dais-carpet"></div>
+    <div class="dais-pedestal"></div>
+  </div>
+
+  <!-- Interactive Days-to-Marriage Simulator (Test how distance closes as wedding date approaches) -->
+  <div class="finale-simulator">
+    <div class="sim-title">✦ Days-to-Marriage Distance Simulator ✦</div>
+    <div class="sim-slider-row">
+      <span style="font-size:11px;color:var(--gold)">Nikah Day (0d)</span>
+      <input type="range" class="sim-slider" id="daysSlider" min="0" max="60" value="30" step="1" title="Drag to see how couple distance closes as marriage date approaches" />
+      <span style="font-size:11px;color:var(--gold)">60 Days</span>
+    </div>
+    <div class="sim-presets">
+      <button type="button" class="sim-btn" data-sim="0">💍 Nikah Day (0 Days)</button>
+      <button type="button" class="sim-btn" data-sim="1">1 Day Left</button>
+      <button type="button" class="sim-btn" data-sim="7">1 Week</button>
+      <button type="button" class="sim-btn" data-sim="15">15 Days</button>
+      <button type="button" class="sim-btn" data-sim="30">30 Days</button>
+      <button type="button" class="sim-btn active" id="simRealBtn">Live Date (~83d)</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p class="a">بَارَكَ اللَّهُ لَكُمَا</p>
+  <p class="t"><span class="en">May Allah bless you both and unite you in goodness.<br>— The families of Irshad &amp; Fathima</span><span class="ar" dir="rtl">بارك الله لكما وجمع بينكما في خير<br>— عائلتا إرشاد وفاطمة</span><span class="ml">അല്ലാഹു നിങ്ങളെ അനുഗ്രഹിക്കട്ടെ, നന്മയിൽ ഒന്നിപ്പിക്കട്ടെ<br>— ഇർഷാദിന്റെയും ഫാത്തിമയുടെയും കുടുംബങ്ങൾ</span></p>
+</footer>
+
+<script>
+var $=function(i){return document.getElementById(i)},Q=function(s){return[].slice.call(document.querySelectorAll(s))},R=Math.random,B=document.body,cur="ea";
+
+/* Language switcher */
+function lang(l){cur=l;B.classList.remove("ea","en","ar","ml");B.classList.add(l);document.documentElement.lang=l=="ml"?"ml":l=="ar"?"ar":"en";
+Q(".lb").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l==l)});
+Q("[data-en]").forEach(function(e){var d=e.dataset,t=l=="ea"?d.en+" · "+d.ar:d[l];if(e.tagName=="OPTION")e.textContent=t;else e.placeholder=t})}
+Q(".lb").forEach(function(b){b.onclick=function(){lang(b.dataset.l)}});lang("ea");
+
+/* Hero scenery stars & fireflies */
+var h=$("hero"),i,e;
+function mk(c,s){e=document.createElement("i");e.className=c;e.style.cssText=s;h.appendChild(e)}
+for(i=0;i<60;i++)mk("st","left:"+R()*100+"%;top:"+R()*75+"%;animation-delay:"+R()*3+"s");
+for(i=0;i<26;i++)mk("ff"+(i%3?"":" p"),"left:"+R()*100+"%;top:"+(20+R()*75)+"%;--dx:"+(R()*200-100)+"px;--dy:"+(R()*160-120)+"px;--t:"+(6+R()*8)+"s,3s;animation-delay:"+(-R()*8)+"s");
+for(i=0;i<3;i++)mk("ss","left:"+R()*50+"%;top:"+R()*30+"%;animation-delay:"+(i*2.7+3)+"s");
+
+/* Dynamic Bride & Groom Positions (Hero & Scroll Companion & Bottom Finale Stage) */
+var T = new Date("2026-12-20T11:00:00+05:30").getTime();
+function getRealDaysLeft() {
+  var diff = T - Date.now();
+  return Math.max(0, Math.ceil(diff / 864e5));
+}
+
+/* Floating Rose Petals & Golden Stardust Particle Engine */
+(function initPetalsSimulation(){
+  var canvas = $("petalsCanvas");
+  if (!canvas) return;
+  var ctx = canvas.getContext("2d");
+  if (!ctx) return;
+  var petals = [];
+  var W, H;
+
+  function resize(){
+    W = canvas.width = canvas.offsetWidth || window.innerWidth;
+    H = canvas.height = canvas.offsetHeight || window.innerHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  var petalColors = [
+    { fill: "rgba(196, 30, 58, 0.72)", stroke: "rgba(255, 105, 125, 0.45)" }, // Velvet Rose
+    { fill: "rgba(224, 86, 108, 0.65)", stroke: "rgba(255, 182, 193, 0.35)" }, // Soft Blush
+    { fill: "rgba(212, 175, 55, 0.75)", stroke: "rgba(255, 235, 175, 0.55)" }, // Gold Flake
+    { fill: "rgba(245, 240, 230, 0.6)", stroke: "rgba(212, 175, 55, 0.28)" }   // Jasmine White
+  ];
+
+  for (var i = 0; i < 36; i++) {
+    petals.push(createPetal(true));
+  }
+
+  function createPetal(randomY){
+    var color = petalColors[Math.floor(Math.random() * petalColors.length)];
+    return {
+      x: Math.random() * (W || window.innerWidth),
+      y: randomY ? Math.random() * (H || window.innerHeight) : -25,
+      size: 7 + Math.random() * 9,
+      vx: (Math.random() - 0.5) * 1.2,
+      vy: 0.7 + Math.random() * 1.3,
+      rotX: Math.random() * Math.PI,
+      rotY: Math.random() * Math.PI,
+      rotZ: Math.random() * Math.PI,
+      vRotX: (Math.random() - 0.5) * 0.03,
+      vRotY: (Math.random() - 0.5) * 0.04,
+      vRotZ: (Math.random() - 0.5) * 0.02,
+      color: color,
+      osc: Math.random() * Math.PI * 2,
+      oscSpeed: 0.02 + Math.random() * 0.02
+    };
+  }
+
+  function drawPetal(p){
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotZ);
+    var sx = Math.cos(p.rotX), sy = Math.sin(p.rotY);
+    if (Math.abs(sx) < 0.05) sx = 0.05;
+    if (Math.abs(sy) < 0.05) sy = 0.05;
+    ctx.scale(sx, sy);
+
+    ctx.beginPath();
+    ctx.moveTo(0, -p.size);
+    ctx.bezierCurveTo(p.size * 0.9, -p.size * 0.7, p.size * 0.8, p.size * 0.7, 0, p.size);
+    ctx.bezierCurveTo(-p.size * 0.8, p.size * 0.7, -p.size * 0.9, -p.size * 0.7, 0, -p.size);
+    ctx.fillStyle = p.color.fill;
+    ctx.fill();
+    ctx.strokeStyle = p.color.stroke;
+    ctx.lineWidth = 0.6;
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  function animatePetals(){
+    ctx.clearRect(0, 0, W, H);
+
+    for (var i = 0; i < petals.length; i++) {
+      var p = petals[i];
+      p.osc += p.oscSpeed;
+      p.x += p.vx + Math.sin(p.osc) * 0.8;
+      p.y += p.vy;
+      p.rotX += p.vRotX;
+      p.rotY += p.vRotY;
+      p.rotZ += p.vRotZ;
+
+      if (p.y > H + 30 || p.x < -30 || p.x > W + 30) {
+        petals[i] = createPetal(false);
+      } else {
+        drawPetal(p);
+      }
+    }
+
+    requestAnimationFrame(animatePetals);
+  }
+  animatePetals();
+})();
+
+function updateCouplePositions(){
+  var daysLeft = getRealDaysLeft();
+  var scrollY = window.scrollY || window.pageYOffset;
+  var heroH = ($("hero") ? $("hero").offsetHeight : 650);
+  var scrollProgress = Math.min(1, scrollY / (heroH * 0.75));
+
+  // Date progress: 60 days = 0, 0 days = 1
+  var dateProgress = Math.max(0, Math.min(1, (60 - daysLeft) / 60));
+  var combinedProgress = Math.min(1, dateProgress * 0.35 + scrollProgress * 0.65);
+
+  // Offset ranges from 8% (outer sides) to 38% (center meeting)
+  var leftPos = 8 + combinedProgress * 30; // 8% to 38%
+  var bride = $("brideCard"), groom = $("groomCard"), badge = $("unionBadge"), heroBadge = $("heroUnionBadge");
+
+  if (bride && groom) {
+    bride.style.left = leftPos + "%";
+    groom.style.right = leftPos + "%";
+
+    if (heroBadge) {
+      if (daysLeft === 0) heroBadge.textContent = "Nikah Today! ❤️";
+      else if (daysLeft === 1) heroBadge.textContent = "Nikah Tomorrow! 💍";
+      else heroBadge.textContent = daysLeft + " Days to Nikah";
+    }
+
+    // Dynamic connecting SVG arc adjustment
+    var arc = $("arcPath");
+    if (arc) {
+      var x1 = 100 + combinedProgress * 130;
+      var x2 = 500 - combinedProgress * 130;
+      arc.setAttribute("d", "M " + x1 + " 70 Q 300 " + (20 + combinedProgress * 25) + " " + x2 + " 70");
+    }
+
+    if (combinedProgress >= 0.82 && badge) {
+      badge.classList.add("active");
+    } else if (badge) {
+      badge.classList.remove("active");
+    }
+  }
+}
+
+/* Floating Couple Scroll Companion: Moves closer as user scrolls down through contents */
+function updateScrollCompanion(){
+  var scrollY = window.scrollY || window.pageYOffset;
+  var docH = document.documentElement.scrollHeight - window.innerHeight;
+  var progress = Math.max(0, Math.min(1, scrollY / (docH || 1)));
+
+  var companion = $("scrollCoupleCompanion");
+  var finale = $("finale-stage");
+  var finaleTop = finale ? finale.offsetTop - window.innerHeight * 0.7 : 999999;
+
+  // Show companion while reading page contents, hide at top and when arriving at the grand finale
+  if (scrollY > 120 && scrollY < finaleTop) {
+    if (companion) companion.classList.add("visible");
+    var fill = $("companionFill");
+    var ind = $("companionIndicator");
+    var pct = Math.round(progress * 100);
+    if (fill) fill.style.width = pct + "%";
+    if (ind) ind.textContent = "Journeying Closer • " + pct + "% Scrolled";
+
+    // Smoothly bring avatars closer together as user scrolls deeper
+    var bAvatar = $("companionBride"), gAvatar = $("companionGroom");
+    var moveIn = progress * 65; // moves up to 65px inward
+    if (bAvatar) bAvatar.style.transform = "translateX(" + moveIn + "px)";
+    if (gAvatar) gAvatar.style.transform = "translateX(" + (-moveIn) + "px)";
+  } else {
+    if (companion) companion.classList.remove("visible");
+  }
+
+  updateCouplePositions();
+}
+window.addEventListener("scroll", updateScrollCompanion);
+updateCouplePositions();
+
+var heroScrollBtn = $("heroScrollBtn");
+if (heroScrollBtn) {
+  heroScrollBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    var target = $("story") || $("countdown");
+    if (target) target.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+var heroUnionBadge = $("unionBadge");
+if (heroUnionBadge) {
+  heroUnionBadge.addEventListener("click", function(e){
+    e.stopPropagation();
+    var b = this.getBoundingClientRect();
+    burst(b.left + b.width / 2, b.top + b.height / 2, 70);
+    var secret = $("secretModal");
+    if (secret) secret.classList.add("active");
+  });
+}
+
+/* Dedicated Bottom Grand Finale Dais: ONLY 2 PEOPLE, Distance based on Days Left */
+var currentSimDays = getRealDaysLeft();
+
+function updateFinaleDais(days) {
+  if (typeof days === "undefined") days = currentSimDays;
+  currentSimDays = Number(days);
+
+  var bride = $("finaleBride"), groom = $("finaleGroom"), emblem = $("finaleEmblem");
+  var daysText = $("finaleDaysText"), distText = $("finaleDistanceText");
+  var slider = $("daysSlider");
+
+  if (slider && Number(slider.value) !== currentSimDays) {
+    slider.value = Math.min(60, currentSimDays);
+  }
+
+  if (daysText) {
+    if (currentSimDays === 0) {
+      daysText.textContent = "TODAY IS NIKAH DAY! ❤️";
+    } else if (currentSimDays === 1) {
+      daysText.textContent = "1 Day Left to Nikah!";
+    } else {
+      daysText.textContent = currentSimDays + " Days to Marriage";
+    }
+  }
+
+  if (distText) {
+    if (currentSimDays === 0) {
+      distText.textContent = "Joined as One Forever 💍";
+    } else {
+      distText.textContent = "Distance: " + currentSimDays + " paces apart";
+    }
+  }
+
+  // Position calculation:
+  // When days = 0: both cards at 42% (standing right next to each other at center)
+  // When days >= 30: both cards at 6% (wide distance across the stage)
+  var clampedDays = Math.min(30, currentSimDays);
+  var progress = (30 - clampedDays) / 30; // 0 to 1
+  var posPercent = 6 + progress * 36; // 6% to 42%
+
+  if (bride && groom) {
+    bride.style.left = posPercent + "%";
+    groom.style.right = posPercent + "%";
+  }
+
+  if (currentSimDays === 0 && emblem) {
+    emblem.classList.add("active");
+    burst(innerWidth / 2, innerHeight * 0.75, 60);
+  } else if (emblem) {
+    emblem.classList.remove("active");
+  }
+}
+
+// Wire interactive Days Simulator slider and preset buttons
+var daysSlider = $("daysSlider");
+if (daysSlider) {
+  daysSlider.addEventListener("input", function(){
+    updateFinaleDais(this.value);
+    Q(".sim-btn").forEach(function(b){ b.classList.remove("active"); });
+  });
+}
+
+Q(".sim-btn[data-sim]").forEach(function(btn){
+  btn.onclick = function(){
+    Q(".sim-btn").forEach(function(b){ b.classList.remove("active"); });
+    this.classList.add("active");
+    var d = Number(this.dataset.sim);
+    updateFinaleDais(d);
+  };
+});
+
+var simRealBtn = $("simRealBtn");
+if (simRealBtn) {
+  simRealBtn.onclick = function(){
+    Q(".sim-btn").forEach(function(b){ b.classList.remove("active"); });
+    this.classList.add("active");
+    updateFinaleDais(getRealDaysLeft());
+  };
+}
+updateFinaleDais();
+
+/* Romantic Arabic Wedding Song (Maher Zain — Baraka Allahu Lakuma) Audio Controller */
+var isAudioPlaying = false, toastTimeout = null;
+
+function showNowPlayingToast(){
+  var toast = $("musicNowPlaying");
+  if (toast) {
+    toast.classList.add("show");
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(function(){
+      toast.classList.remove("show");
+    }, 7000);
+  }
+}
+
+function playWeddingSong(){
+  var bg = $("bg-music");
+  if (!bg) return;
+  bg.volume = 0.85;
+  var playPromise = bg.play();
+  if (playPromise !== undefined) {
+    playPromise.then(function(){
+      isAudioPlaying = true;
+      updateMusicUI();
+      showNowPlayingToast();
+    }).catch(function(e){
+      console.log("Audio waiting for user gesture:", e);
+    });
+  }
+}
+
+function pauseWeddingSong(){
+  var bg = $("bg-music");
+  if (bg) bg.pause();
+  isAudioPlaying = false;
+  updateMusicUI();
+  var toast = $("musicNowPlaying");
+  if (toast) toast.classList.remove("show");
+}
+
+function toggleMusic(){
+  if (isAudioPlaying) {
+    pauseWeddingSong();
+  } else {
+    playWeddingSong();
+  }
+}
+
+function updateMusicUI(){
+  var btn = $("musicToggle");
+  if (btn) {
+    if (isAudioPlaying) btn.classList.remove("paused");
+    else btn.classList.add("paused");
+  }
+}
+$("musicToggle").onclick = toggleMusic;
+
+/* Islamic Royal Grand Entrance Gate Opening Trigger (Replaces Lantern) */
+var gateBtn = $("gateDoorBtn"), intro = $("intro");
+
+function openIslamicGate(e){
+  if (e && e.stopPropagation) e.stopPropagation();
+  if (!intro || intro.classList.contains("open-doors")) return;
+  intro.classList.add("open-doors");
+
+  // Immediately play the romantic Arabic wedding song with vocals
+  playWeddingSong();
+
+  // Burst golden particles & stardust
+  burst(innerWidth / 2, innerHeight / 2, 70);
+
+  // Smoothly open and reveal the hero invitation
+  setTimeout(function(){
+    intro.classList.add("opened");
+    document.body.classList.add("go");
+    updateCouplePositions();
+    updateFinaleDais();
+  }, 1100);
+
+  setTimeout(function(){
+    intro.style.display = "none";
+  }, 2600);
+}
+
+if (gateBtn) {
+  gateBtn.onclick = openIslamicGate;
+  gateBtn.addEventListener("click", openIslamicGate);
+  gateBtn.addEventListener("touchend", openIslamicGate);
+}
+if (intro) {
+  intro.onclick = openIslamicGate;
+  intro.addEventListener("click", openIslamicGate);
+}
+
+/* Out-of-the-box reveals & 3D scroll animations */
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.classList.add("in");
+      var rect = entry.target.getBoundingClientRect();
+      if(rect.top > 0 && rect.top < window.innerHeight){
+        burst(rect.left + rect.width / 2, rect.top + 20, 8);
+      }
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold: 0.12, rootMargin: "0px 0px -40px 0px"});
+
+Q(".rv").forEach(function(x,k){
+  x.style.transitionDelay=(k % 3 * 0.12)+"s";
+  io.observe(x);
+});
+
+/* Card 3D Perspective Tilt on Mouse & Touch */
+Q(".tc, .couple-card-wrap, .venue, .memory-card").forEach(function(c){
+  c.onpointermove=function(v){
+    var b=c.getBoundingClientRect(),x=(v.clientX-b.left)/b.width-.5,y=(v.clientY-b.top)/b.height-.5;
+    c.style.transform="perspective(700px) rotateY("+(x*12)+"deg) rotateX("+(-y*12)+"deg) translateY(-2px)";
+  };
+  c.onpointerleave=function(){
+    c.style.transform="";
+  };
+});
+
+/* Countdown timer logic */
+var U=[["d","Days","أيام","ദിവസം"],["h","Hours","ساعات","മണിക്കൂർ"],["m","Mins","دقائق","മിനിറ്റ്"],["s","Secs","ثوانٍ","സെക്കൻഡ്"]];
+U.forEach(function(u){$("cd").insertAdjacentHTML("beforeend",'<div class="rg"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="34" class="bg"/><circle cx="40" cy="40" r="34" class="fg" id="c'+u[0]+'"/></svg><b id="'+u[0]+'">0</b><span class="t"><span class="en">'+u[1]+'</span><span class="ar">'+u[2]+'</span><span class="ml">'+u[3]+'</span></span></div>')});
+
+function set(k,v){var n=$(k);if(!n)return;if(n.textContent!=v){n.textContent=v;n.classList.remove("pop");void n.offsetWidth;n.classList.add("pop")}}
+function tick(){
+  var x=Math.max(0,T-Date.now()),v={d:x/864e5,h:x%864e5/36e5,m:x%36e5/6e4,s:x%6e4/1e3},f={d:Math.min(v.d/365,1),h:v.h/24,m:v.m/60,s:v.s/60};
+  var daysLeft = Math.floor(v.d);
+  
+  var cdTitle = $("cdTitle");
+  if (daysLeft === 1) {
+    if (cdTitle) cdTitle.innerHTML = '<span class="en">ONLY 1 DAY TO GO!</span><span class="ar" dir="rtl">بقي يوم واحد فقط!</span><span class="ml">ഇനി ഒരു ദിവസം മാത്രം!</span>';
+  } else if (daysLeft === 0) {
+    if (cdTitle) cdTitle.innerHTML = '<span class="en">TODAY IS OUR SPECIAL DAY ❤️</span><span class="ar" dir="rtl">اليوم هو يومنا المميز</span><span class="ml">ഇന്നാണ് ആ മംഗളദിനം</span>';
+  } else if (daysLeft < 0) {
+    if (cdTitle) cdTitle.innerHTML = '<span class="en">AND SO OUR FOREVER BEGINS...</span><span class="ar" dir="rtl">وهكذا تبتدئ رحلتنا الأبدية</span><span class="ml">ഞങ്ങളുടെ നിത്യവസന്തം ആരംഭിക്കുന്നു</span>';
+  }
+
+  for(var k in v){
+    set(k,Math.floor(v[k]));
+    var ck=$("c"+k);
+    if(ck) ck.style.strokeDashoffset=213.6*(1-f[k]);
+  }
+}
+tick();setInterval(tick,1000);
+
+/* Particle canvas burst */
+var cv=$("cf"),cx=cv.getContext("2d"),P=[],G=["✦","♥","☾","✿"],C=["#D4AF37","#6F9E80","#3F7D5E","#1F5F43"];
+function sz(){cv.width=innerWidth;cv.height=innerHeight}sz();addEventListener("resize",sz);
+function burst(x,y,n){var o=P.length==0;for(var j=0;j<n;j++)P.push({x:x,y:y,vx:(R()-.5)*18,vy:R()*-15-2,g:G[j%4],c:C[j%4],a:R()*6});if(o)lp()}
+function lp(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=.35;p.a+=.15;cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.font="22px serif";cx.fillText(p.g,0,0);cx.restore();return p.y<cv.height+30});if(P.length)requestAnimationFrame(lp)}
+
+/* Sparkle mouse trail */
+var lt=0;addEventListener("pointermove",function(v){var n=Date.now();if(n-lt<50)return;lt=n;var s=document.createElement("span");s.className="sp";s.textContent="✦";s.style.left=v.clientX+"px";s.style.top=v.clientY+"px";s.style.color=C[n%4];document.body.appendChild(s);setTimeout(function(){s.remove()},900)});
+
+/* Floating Blessing Fountains on Reaction Click */
+function spawnBlessing(x, y, emoji){
+  for(var i = 0; i < 7; i++){
+    var floater = document.createElement("div");
+    floater.className = "floating-blessing";
+    floater.textContent = emoji;
+    floater.style.left = x + "px";
+    floater.style.top = y + "px";
+    var dx = (Math.random() - 0.5) * 110;
+    var dx2 = dx + (Math.random() - 0.5) * 70;
+    var dr = (Math.random() - 0.5) * 40;
+    var dr2 = (Math.random() - 0.5) * 90;
+    floater.style.setProperty("--dx", dx + "px");
+    floater.style.setProperty("--dx2", dx2 + "px");
+    floater.style.setProperty("--dr", dr + "deg");
+    floater.style.setProperty("--dr2", dr2 + "deg");
+    floater.style.animationDelay = (i * 0.07) + "s";
+    document.body.appendChild(floater);
+    setTimeout(function(el){ el.remove(); }, 2300, floater);
+  }
+}
+
+/* Excitement reactions */
+var totalHearts = 1248;
+Q(".reaction-btn").forEach(function(btn){
+  btn.onclick = function(e){
+    totalHearts += 1;
+    $("heartsCount").textContent = totalHearts.toLocaleString();
+    var rect = btn.getBoundingClientRect();
+    var x = e.clientX || (rect.left + rect.width / 2);
+    var y = e.clientY || (rect.top + rect.height / 2);
+    burst(x, y, 22);
+    var emoji = btn.dataset.react || "❤️";
+    spawnBlessing(x, y, emoji);
+    btn.style.transform = "scale(0.85)";
+    setTimeout(function(){ btn.style.transform = ""; }, 180);
+  };
+});
+
+/* Ambient Golden Stardust on Scroll */
+var lastScrollY = window.scrollY, scrollSparkleTimer = 0;
+window.addEventListener("scroll", function(){
+  var now = Date.now();
+  var curY = window.scrollY;
+  var speed = Math.abs(curY - lastScrollY);
+  lastScrollY = curY;
+  
+  if (speed > 10 && now - scrollSparkleTimer > 180) {
+    scrollSparkleTimer = now;
+    var rx = innerWidth * (0.2 + Math.random() * 0.6);
+    var ry = innerHeight * 0.85;
+    burst(rx, ry, 3);
+  }
+}, { passive: true });
+
+/* Voice Recording Feature */
+var mediaRecorder, audioChunks = [], recordedAudioUrl = "";
+var recBtn = $("recVoiceBtn"), recStatus = $("recStatus"), audioPrev = $("audioPreview");
+
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  recBtn.onclick = function(){
+    if (mediaRecorder && mediaRecorder.state === "recording") {
+      mediaRecorder.stop();
+    } else {
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function(stream){
+        mediaRecorder = new MediaRecorder(stream);
+        audioChunks = [];
+        mediaRecorder.ondataavailable = function(e){ audioChunks.push(e.data); };
+        mediaRecorder.onstop = function(){
+          var audioBlob = new Blob(audioChunks, { type: 'audio/mp3' });
+          recordedAudioUrl = URL.createObjectURL(audioBlob);
+          audioPrev.src = recordedAudioUrl;
+          audioPrev.style.display = "block";
+          recBtn.classList.remove("recording");
+          recBtn.textContent = "✓ Voice Wish Recorded!";
+          recStatus.textContent = "Play preview above";
+        };
+        mediaRecorder.start();
+        recBtn.classList.add("recording");
+        recBtn.textContent = "⏹ Stop Recording";
+        recStatus.textContent = "Recording... (Max 20s)";
+        setTimeout(function(){
+          if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
+        }, 20000);
+      }).catch(function(){
+        recStatus.textContent = "Microphone access unavailable. Enter text wish instead.";
+      });
+    }
+  };
+} else {
+  recBtn.style.display = "none";
+}
+
+/* Save & Load Memories from localStorage */
+function loadMemories() {
+  var saved = JSON.parse(localStorage.getItem("wedding_memories") || "[]");
+  var grid = $("memoryGrid");
+  saved.forEach(function(m){
+    var card = document.createElement("div");
+    card.className = "memory-card";
+    card.innerHTML = '<div class="author">'+escapeHtml(m.name)+'</div><div class="text">"'+escapeHtml(m.wish)+'"</div>' +
+                     (m.audio ? '<div class="audio-player"><audio controls src="'+m.audio+'"></audio></div>' : '') +
+                     '<small style="color:var(--sage-soft)">✦ Guest Wish</small>';
+    grid.prepend(card);
+  });
+}
+function escapeHtml(str){ return (str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+loadMemories();
+
+/* RSVP & Memory Form Submission */
+var M={y:{en:"JazakAllah khair, N! We look forward to seeing you.",ar:"جزاك الله خيرًا يا N! نتطلع لرؤيتكم.",ml:"ജസാക്കല്ലാഹ് ഖൈർ, N! നിങ്ങളെ കാണാൻ കാത്തിരിക്കുന്നു."},n:{en:"Thank you, N. You will be missed; keep us in your duas.",ar:"شكرًا يا N، سنفتقدكم، لا تنسونا من دعائكم.",ml:"നന്ദി, N. നിങ്ങളുടെ അസാന്നിധ്യം അറിയും; ദുആയിൽ ഞങ്ങളെ ഓർക്കണേ."}};
+$("f").addEventListener("submit",function(v){
+  v.preventDefault();
+  var n=this.n.value.trim(),k=this.a.value,w=this.w.value.trim(),b=$("f").getBoundingClientRect();
+  var t=M[k],ok=$("ok");
+  
+  if (w || recordedAudioUrl) {
+    var saved = JSON.parse(localStorage.getItem("wedding_memories") || "[]");
+    saved.push({ name: n, wish: w || "Wishing you love & blessings!", audio: recordedAudioUrl });
+    localStorage.setItem("wedding_memories", JSON.stringify(saved));
+    loadMemories();
+  }
+
+  ok.className="t";ok.style.marginTop="20px";ok.innerHTML='<span class="en"></span><span class="ar" dir="rtl"></span><span class="ml"></span>';
+  ["en","ar","ml"].forEach(function(l){ok.querySelector("."+l).textContent=t[l].replace("N",n)});
+  this.style.display="none";
+  if(k=="y")burst(innerWidth/2,b.top+b.height/2,140);
+});
+
+/* Command Assistant Navigator */
+var cmdFab = $("cmdFab"), cmdModal = $("cmdModal"), closeCmd = $("closeCmd"), cmdInput = $("cmdInput");
+cmdFab.onclick = function(){ cmdModal.classList.add("active"); cmdInput.focus(); };
+closeCmd.onclick = function(){ cmdModal.classList.remove("active"); };
+cmdModal.onclick = function(e){ if(e.target===cmdModal) cmdModal.classList.remove("active"); };
+
+function runCommand(query){
+  query = query.toLowerCase().trim();
+  cmdModal.classList.remove("active");
+  if(query.includes("music")) { toggleMusic(); return; }
+  
+  var target = null;
+  if(query.includes("finale") || query.includes("union") || query.includes("dais")) target = $("finale-stage");
+  else if(query.includes("memory") || query.includes("memories") || query.includes("wish")) target = $("memories");
+  else if(query.includes("story") || query.includes("photo") || query.includes("couple")) target = $("story");
+  else if(query.includes("day") || query.includes("countdown") || query.includes("time")) target = $("countdown");
+  else if(query.includes("location") || query.includes("venue") || query.includes("map")) target = $("venue");
+  else if(query.includes("schedule") || query.includes("celebration")) target = $("celebrations");
+  else if(query.includes("rsvp")) target = $("rsvp");
+  
+  if(target){
+    target.scrollIntoView({ behavior: "smooth" });
+    target.style.transition = "outline .4s";
+    target.style.outline = "4px solid var(--gold)";
+    setTimeout(function(){ target.style.outline = "none"; }, 2000);
+  }
+}
+
+cmdInput.onkeydown = function(e){ if(e.key === "Enter") runCommand(this.value); };
+Q(".chip").forEach(function(chip){
+  chip.onclick = function(){ runCommand(this.dataset.cmd); };
+});
+
+/* Secret Message Easter Eggs */
+$("unionBadge").onclick = function(){ $("secretModal").classList.add("active"); };
+$("closeSecret").onclick = function(){ $("secretModal").classList.remove("active"); };
+$("secretModal").onclick = function(e){ if(e.target===$("secretModal")) $("secretModal").classList.remove("active"); };
+</script>
+</body>
+</html>
